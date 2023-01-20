@@ -1,18 +1,1 @@
-const elements = document.querySelectorAll("img")
-
-const Lazy = target => {
-    const io = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target
-
-                img.setAttribute("src", img.getAttribute("data-src"))
-                img.classList.add("fade")
-                observer.disconnect()
-            }
-        })
-    })
-    io.observe(target)
-}
-
-elements.forEach(Lazy)
+const elements=document.querySelectorAll("img"),Lazy=e=>{let t=new IntersectionObserver((e,t)=>{e.forEach(e=>{if(e.isIntersecting){let s=e.target;s.setAttribute("src",s.getAttribute("data-src")),s.classList.add("fade"),t.disconnect()}})});t.observe(e)};elements.forEach(Lazy);
