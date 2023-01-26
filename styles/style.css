@@ -9,21 +9,23 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
 
-    background-color: #f3f3f3;
+    background: linear-gradient(160deg,
+        #f3f3f3,
+        rgba(235, 235, 235, 0.933),
+        rgba(233, 235, 240, 0.933)
+    );
     width: 100%;
-    max-width: 48rem;
+    max-width: 50rem;
     min-height: 100vh;
 }
 p {
     width: 95%;
-    max-width: 1124px;
+    max-width: 50rem;
 }   
 /*
 Navigation
 */
 nav {
-    background-color: rgba(193, 193, 193, 0.3);
-
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -39,7 +41,6 @@ nav a {
 }
 nav img {
     float: left;
-    margin-left: 3vmin;
     width: 60px;
     height: 60px;
     border-radius: 99999px;
@@ -57,6 +58,7 @@ nav .links {
     height: 60px;
 }
 nav a {
+    text-decoration: none;
     margin-left: 3vmin;
 }
 /*
@@ -107,6 +109,7 @@ Tech cards
     flex-wrap: wrap;
 }
 .tech-card {
+    transition: 250ms;
     width: auto;
     padding: 10px;
     font-size: 18px;
@@ -229,12 +232,20 @@ Articles
     margin-left: 0px;
     text-decoration: none;
     color: black;
-    padding: 8px;
-
+    border-radius: 10px;
     transition: 250ms;
 }
-.articles a:hover {
-    box-shadow: 1px 1px 50px #d2d2d2;
+.articles a article {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    padding: 8px;
+    z-index: 9999999;
+}
+.articles a:hover img {
+    transform: scale(1.1);
 }
 article {
     margin-left: 0px;
@@ -275,6 +286,23 @@ code {
 /*
 Responsive
 */
+@media (max-width: 450px) {
+    .articles a {
+        margin-left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    article, .articles a article{
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+    }
+    article-image {
+        margin-left: auto;
+    }
+}
 @media (max-width: 850px) {
     body {
         max-width: 100%;
