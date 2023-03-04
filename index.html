@@ -10,6 +10,10 @@
     <link rel="icon" href="erixweb.ico" />
     <link rel="stylesheet" href="/styles/style.css?v=2" type="text/css">
     <!-- Meta tags -->
+    <meta 
+        name="robots"
+        content="follow, index"
+    />
     <meta name="title" content="ErixWeb | Desarollador web Front-End 📱 y Back-End 📟 catalán">
     <meta name="description" content="Hola, me llamo ErixWeb 👋 soy un desarollador web Front-End 📱 y Back-End 📟 catalán en Barcelona. Échale un vistazo a mi portfolio💻, artículos o blogs 🗣️ Front-End 📱 de React, JavaScript, HTML o CSS.">
     <meta name="theme-color" content="#45CDFF">
@@ -34,10 +38,10 @@
         <div class="wrap">
             <img data-src="/images/er.webp" alt="Hola me llamo Erix soy un desarollador web Front-End y Back-End catalán. Hago articulos web, proyectos con gente. Visita mi página web para enterarte de todo lo que hago." loading="lazy" decoding="async" >
             <div class="links"> 
-                <a href="/">
+                <a href="#">
                     Sobre mí
                 </a>
-                <a href="/#proyectos">
+                <a href="#proyectos">
                     Proyectos
                 </a>
                 <a href="/articulos">
@@ -56,6 +60,14 @@
         </div>
     </header>
     <main>
+        <section id="sobremi">
+            <h2>
+                Sobre mí
+            </h2>
+            <p>
+                Me llamo Erik y soy un desarrollador web fullstack es decir, Front-End y Back-End. Siempre me ha dado curiosidad cómo están hechas las páginas web y por eso empecé con la programación. Empecé con PHP y después JavaScript. Empezar con PHP hizo que pueda entender otros lenguajes y me dio la habilidad de adaptarme fácilmente.
+            </p>
+        </section>
         <section id="tecnologias">
             <h2>Tecnologías</h2>
             <div class="tech-cards">
@@ -124,6 +136,17 @@
         </section>
         <section class="articles" id="artículos">
             <h2>Artículos</h2>
+            <a href="/articulo/bun-es-increible">
+                <article>
+                    <article-image>
+                        <img data-src="/images/technologies/bun.svg" alt="Artículo en el que explico el runtime de JavaScript Bun.js y por qué me encanta.">
+                    </article-image>
+                    <article-content>
+                        <h3>Bun es increíble</h3>
+                        <span>04/03/23</span>
+                    </article-content>
+                </article>
+            </a>
             <a href="/articulo/async-await-en-javascript">
                 <article>
                     <article-image>
