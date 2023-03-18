@@ -102,8 +102,9 @@ Tech cards
 */
 .tech-cards {
     display: flex;
-    grid-gap: 8px;
     flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
 }
 .tech-card {
     transition: 250ms;
