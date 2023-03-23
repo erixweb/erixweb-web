@@ -16,7 +16,8 @@ body {
     scroll-behavior: smooth;
 }
 p {
-    width: 95%;
+    margin-top: 10px;
+    width: 100%;
     max-width: 50rem;
 }   
 /*
@@ -70,6 +71,7 @@ header#sobremi {
     width: 100%;
 }
 header#blog-header {
+    line-height: 1.6;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -204,7 +206,7 @@ Main
 main {
     margin-top: 40px;
     margin-bottom: 40px;
-    line-height: 1.6;
+    line-height: 1.7;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,31 +270,22 @@ article img {
 /*
 Code
 */
-pre {
+pre, code{
+    font-family: Operator Mono,Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+    color: #fff;
     width: 100%;
-    margin: 0px;
-    padding: 8px;
-    overflow: auto;
     background-color: #2f2e3c;
-    border-radius: 7px;
 }
-code {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    font-family: Operator Mono, Fira Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-    font-size: 16px;
-    margin-top: 0px;
-    padding: 0px;
-    text-align: left;
+pre, code {
     tab-size: 4;
-    color: #c9d1d9;
+    max-width: 100%;
 }
+pre code {display:block;overflow-x:auto;padding:1em}code {padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e0aa6c; font-weight: 600;}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
 strong {
-    padding: 2px;
+    padding: 0px;
     color: #fff;
     background-color: #2f2e3c;
-    font-weight: 400;
+    font-weight: 500;
 }
 /*
 Responsive
