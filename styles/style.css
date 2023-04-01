@@ -32,7 +32,7 @@ nav {
     width: 100%;
     height: 80px;
     padding: 8px;
-    border-radius: 7px;
+    border-bottom: 2px solid black;
 }
 nav a {
     color: #000;
@@ -49,6 +49,7 @@ nav div.wrap {
 }
 
 nav .links {
+    float: right;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -87,7 +88,7 @@ header img {
     width: 120px;
     height: 120px;
     border-radius: 25px;
-    aspect-ratio: 16/8;
+    aspect-ratio: 16/9;
 }
 header h1 {
     margin-bottom: 20px;
@@ -160,6 +161,7 @@ Project cards
 }
 
 .project{
+    position: relative;
     transition: 250ms;
     background-color: #ededed;
     
@@ -174,6 +176,7 @@ Project cards
     margin-bottom: 20px;
 }
 .project:hover {
+    transform: scale(1.1);
     box-shadow: 1px 1px 50px rgba(171, 171, 171, 0.26);
 }
 .project p, .project h3{
@@ -219,6 +222,27 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+section#social {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 10px;
+
+}
+section#social a {
+    color: #fff;
+    text-decoration: none;
+    width: 38px;
+    height: 38px;
+    height: 100%;
+}
+section#social img {
+    margin: 10px;   
+    width: 38px;
+    height: 38px;
 }
 main h2 {
     margin-top: 20px;
