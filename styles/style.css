@@ -236,7 +236,6 @@ Project cards
     max-height: 240px;
     width: 100%;
 }
-
 .showmore {
     color: blue;
 }
@@ -415,7 +414,11 @@ Responsive
         width: 100%;
         border-radius: 0px;
     }
-
+    .project {
+        padding-bottom: 20px;
+        max-width: 400px;
+        display: block;
+    }
     pre {
         width: 90%;
     }
