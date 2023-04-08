@@ -1,0 +1,69 @@
+---
+import "./styles/index.css"
+import Navigation from "../components/Navigation.astro";
+
+const { frontmatter } = Astro.props 
+
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/images/er.webp">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erik | {frontmatter.title}</title>
+    
+    <script defer>
+        window.addEventListener("load", () => {
+            const script = document.createElement("script")
+            script.src = "/js/lazy.js"
+            script.defer = true 
+            document.body.append(script)
+            const highlight = document.createElement("script")
+            highlight.src = "https://unpkg.com/@highlightjs/cdn-assets@11.7.0/highlight.min.js"
+            document.body.append(highlight)
+            highlight.onload = () => {
+                hljs.highlightAll()
+            }
+        })
+    </script>
+    <meta
+        name="robots"
+        content="follow, index"
+    />
+    <meta name="title" content={`Erik | ${frontmatter.title}`}>
+    <meta name="description" content={frontmatter.desc}>
+    <meta name="theme-color" content="#45CDFF">
+    <meta name="keywords" content={frontmatter.desc.replace(" ", ",")}>
+    <!-- OpenGraph -->
+    <meta name="og:site_name" content="erixweb.github.io">
+    <meta name="og:image" content="/images/er.webp">
+    <meta name="og:title" content={`Erik | ${frontmatter.title}`}>
+    <meta name="og:description" content={frontmatter.desc}>
+    <meta name="og:locale" content="es_ES">
+    <meta name="og:type" content="website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@erixweb">
+    <meta name="twitter:image" content="/images/er.webp">
+    <meta name="twitter:domain" content="erixweb.github.io">
+    <meta name="twitter:site" content="@erixweb">
+</head>
+<body id="blog">
+    <Navigation />
+    <header id="blog-header" style="margin-top: 140px">
+        <img data-src={frontmatter.img} />
+        <h1>
+            {frontmatter.title}
+        </h1>
+        <p>
+            {frontmatter.desc}
+        </p>
+    </header>
+    <main style="margin-top: 40px;">
+		<slot />
+	</main>
+</body>
+</html>

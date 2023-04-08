@@ -1,0 +1,20 @@
+---
+import blogs from "../../store/blogs";
+---
+<section class="articles" id="articulos">
+    {
+        blogs.map(blog => (
+            <a href={blog.url}>
+                <article>
+                    <article-image>
+                        <img data-src={blog.image} alt={`Imagen de artículo sobre ${blog.title}`}>
+                    </article-image>
+                    <article-content>
+                        <h3>{blog.title}</h3>
+                        <span>{blog.date}</span>
+                    </article-content>
+                </article>
+            </a>
+        ))
+    }
+</section>

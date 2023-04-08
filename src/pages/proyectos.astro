@@ -1,16 +1,25 @@
+---
+import "./styles/index.css"
+import Navigation from "../components/Navigation.astro";
+import ProjectsCard from "../components/ProjectsCard.astro";
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErixWeb 🦾 | Desarollador web Front-End y Back-End catalán</title>
-    <script defer src="/chunk.js"></script>
-    <!-- Icon & styles -->
-    <link rel="icon" href="/erixweb.ico" />
-    <link rel="stylesheet" href="/styles/style.css?v=2" type="text/css">
-    <!-- Meta tags -->
-    <meta 
+    <title>Erik | Proyectos</title>
+    
+    <script defer>
+        window.addEventListener("load", () => {
+            const script = document.createElement("script")
+            script.src = "/js/lazy.js"
+            script.defer = true 
+            document.body.append(script)
+        })
+    </script>
+    <meta
         name="robots"
         content="follow, index"
     />
@@ -33,31 +42,9 @@
     <meta name="twitter:site" content="@erixweb">
 </head>
 <body>
-
-    <nav>
-        <div class="wrap">
-            <img data-src="/images/er.webp" alt="Hola me llamo Erix soy un desarollador web Front-End y Back-End catalán. Hago articulos web, proyectos con gente. Visita mi página web para enterarte de todo lo que hago." loading="lazy" decoding="async" >
-            <div class="links"> 
-                <a href="/">
-                    Sobre mí
-                </a>
-                <a href="#proyectos">
-                    Proyectos
-                </a>
-                <a href="/articulos">
-                    Artículos
-                </a>
-            </div>
-        </div>
-    </nav>
-    <header id="sobremi">
-        <img data-src="/images/er.webp" alt="ErixWeb, desarollador web Front-End y Back-End catalán. Hago articulos web, proyectos con gente. Visita mi página web para enterarte de todo lo que hago.">
-        <div>
-            <h1>404 😭</h1>
-            <p>
-                No he podido encontrar el recurso al que estabas intentando acceder. Prueba a volver a la <a href="/">página principal</a>.
-            </p>
-        </div>
-    </header>
+    <Navigation />
+    <main style="margin-top: 140px;">
+		<ProjectsCard slice={50} />
+	</main>
 </body>
 </html>
