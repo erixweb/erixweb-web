@@ -12,4 +12,13 @@ No suelen haber cambios grandes entre versiones y actualizar para obtener el may
 Sí, he conseguido actualizar toda mi página web e incluso mejorarla  en tan solo unas 2h. 
 
 En Astro la manera de crear componentes es tan fácil que, solo he tenido que reutilizar código que ya tenía y modificarlo un poco.
-
+# ¿Dónde instalarlo?
+Astro se puede instalar usando el siguiente comando:
+```
+npm create astro@latest 
+```
+En el caso de que estés en pnpm
+```
+pnpm create astro@latest
+```
+Si no usas ninguno de estos dos, puedes encontrar información de astro en [astro.build](https://astro.build)
