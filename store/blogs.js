@@ -1,6 +1,6 @@
 export const blogs = [
     {
-        url: "/articulo/cargar-js.md",
+        url: "/articulo/cargar-js",
         title: "Cargar JavaScript",
         date: "09/04/23",
         image: "/images/tech/js.svg"
