@@ -145,8 +145,8 @@ main {
     width: 100%;
 }
 main h2, h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     width: 100%;
     text-align: center;
 }
@@ -254,7 +254,6 @@ section#tecnologias {
 .articles a:hover img {
     transform: scale(1.1);
 }
-
 article {
     margin-left: 0px;
     display: flex;
