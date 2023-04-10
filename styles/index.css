@@ -19,6 +19,16 @@ body {
     scroll-behavior: smooth;
 }
 /*
+    Lazy
+*/
+img {
+    transition: 250ms;
+    opacity: 0;
+}
+.fade {
+    opacity: 100;
+}
+/*
     Navigation
 */
 nav {
