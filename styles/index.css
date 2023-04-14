@@ -65,7 +65,20 @@ nav img {
     border-radius: 99999px;
     aspect-ratio: 16/9;
 }
-
+nav button {
+    z-index: 999999;
+    position: fixed;
+    top: 24px;
+    right: 10px;
+    display: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+nav svg {
+    width: 24px;
+    height: 24px;
+}
 nav div.wrap {
     width: 100%;
     max-width: 50rem;
@@ -286,6 +299,28 @@ article img {
 
 pre{margin-top: 40px; margin-bottom: 40px;}
 code,pre{font-family:Operator Mono,Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;color:#fff;width:100%;background-color:#2f2e3c;tab-size:4;max-width:100%}pre code{display:block;overflow-x:auto;padding:1em}code{padding:3px 5px;}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e0aa6c;font-weight:600}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
+@media (max-width: 450px) {
+    nav .links {
+        display: none;
+    }
+    nav .links {
+        flex-direction: column;
+        place-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #f3f3f3c2;
+    }
+    nav .links a {
+        text-align: center;
+        width: 100%;
+    }
+    nav button {
+        display: block;
+    }
+}
 @media (max-width: 670px) {
     header#blog-header {
         display: flex;
