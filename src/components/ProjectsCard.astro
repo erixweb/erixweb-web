@@ -61,8 +61,8 @@ const { slice } = Astro.props
         border-top-right-radius: 7px;
         border-top-left-radius: 7px;
         height: 100%;
-        max-height: 240px;
         width: 100%;
+        max-height: 240px;
     }
     .showmore {
         border-radius: 7px;
@@ -81,7 +81,7 @@ const { slice } = Astro.props
                 <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
                 <div>
                     <h3>
-                        {project.name}   
+                        {project.name} &rarr;  
                     </h3>
                     <p>
                         {project.desc}
