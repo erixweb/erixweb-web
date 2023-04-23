@@ -24,7 +24,7 @@ const { slice } = Astro.props
     
     .project {
         position: relative;
-        transition: 250ms;
+        transition: 550ms;
         background-color: #ededed;
     
         box-shadow: 1px 1px 1px rgba(218, 218, 218, 0.485);
@@ -36,11 +36,18 @@ const { slice } = Astro.props
         height: 100%;
         margin-top: 0px;
         margin-bottom: 20px;
+
     }
     
     .project:hover {
-        transform: scale(1.1);
         box-shadow: 1px 1px 50px rgba(171, 171, 171, 0.26);
+    }
+    .project img {
+        transition: 400ms;
+        object-view-box: inset(0%);
+    }
+    .project:hover img {
+        object-view-box: inset(10%);
     }
     
     .project p,
