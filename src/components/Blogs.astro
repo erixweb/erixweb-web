@@ -1,6 +1,55 @@
 ---
 import blogs from "../../store/blogs";
 ---
+<style is:inline>
+    .articles {
+        margin-top: 40px;
+    }
+    .articles a {
+        margin-left: 0px;
+        text-decoration: none;
+        color: black;
+        border-radius: 10px;
+        transition: 250ms;
+    }
+
+    .articles a article {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        padding: 8px;
+    }
+
+    .articles a:hover img {
+        transform: scale(1.1);
+    }
+    article {
+        margin-left: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    article-image {
+        height: 100%;
+        margin-left: 0px;
+    }
+
+    article-content {
+        width: auto;
+        margin-left: 5vmin;
+    }
+
+    article img {
+        aspect-ratio: 1;
+        margin-left: 0px;
+        width: 48px;
+        height: 100%;
+        object-fit: fill;
+    }
+</style>
 <section class="articles" id="articulos">
     {
         blogs.map(blog => (

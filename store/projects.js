@@ -22,6 +22,13 @@ export const projects = [
     },
     {
         id: "4",
+        name: "Zastate",
+        desc: "Zastate es un manejador de estados que pesa tan solo 1.2kB.",
+        url: "https://zastate.deno.dev",
+        image: "/images/projects/zastate_thumb.avif"
+    },
+    {
+        id: "5",
         name: "WetSpain",
         desc: "WetSpain es una página para ver el clima en diferentes ciudades de España.",
         url: "https://wetspain.vercel.app",
