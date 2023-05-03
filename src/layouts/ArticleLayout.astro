@@ -1,6 +1,7 @@
 ---
 import "/styles/index.css"
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 
 const { frontmatter } = Astro.props 
 
@@ -67,5 +68,7 @@ const { frontmatter } = Astro.props
     <main style="margin-top: 40px;">
 		<slot />
 	</main>
+    <Footer />
+
 </body>
 </html>
