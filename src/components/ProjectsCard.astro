@@ -78,11 +78,34 @@ const { slice } = Astro.props
         text-decoration: none;
         color: white;
     }
+    .slider {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        max-width: 50rem;
+        display: flex;
+        position: relative;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .slider img {
+        left: 0px;
+        position: sticky;
+        scroll-snap-align: start;
+        max-width: 100%;
+        width: 50rem;
+        object-fit: cover;
+        border-radius: 7px;
+    }
 </style>
 <section class="projects">
     <h2>
         Proyectos
     </h2>
+    <div class="slider">
+        {projects.slice(0, slice).map(project => (
+            <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
+        ))}
+    </div>
     {projects.slice(0, slice).map(project => (
             <a class="project" href={project.url} target="_blank">
                 <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
