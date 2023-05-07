@@ -37,12 +37,14 @@ const { slice } = Astro.props
         margin-top: 0px;
         margin-bottom: 20px;
     }
+    .project div:nth-child(1) {
+        height: 180px;
+    }
     
     .project:hover {
         box-shadow: 1px 1px 50px rgba(171, 171, 171, 0.26);
     }
     .project img {
-        aspect-ratio: 16/9;
         transition: 400ms;
         object-view-box: inset(0%);
     }
@@ -108,7 +110,9 @@ const { slice } = Astro.props
     </div>
     {projects.slice(0, slice).map(project => (
             <a class="project" href={project.url} target="_blank">
-                <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
+                <div>
+                    <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
+                </div>
                 <div>
                     <h3>
                         {project.name} &rarr;  

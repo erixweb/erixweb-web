@@ -1,63 +1,43 @@
 ---
 import blogs from "../../store/blogs";
-import Footer from "./Footer.astro";
 ---
 <style is:inline>
-    .articles {
-        margin-top: 40px;
-    }
-    .articles a {
-        margin-left: 0px;
-        text-decoration: none;
-        color: black;
-        border-radius: 10px;
-        transition: 250ms;
-    }
-
-    .articles a:hover img {
-        transform: scale(1.1);
-    }
-    .home-article {
-        height: 100%;
-        margin-bottom: 10px;
+    .article {
         margin-left: 0px;
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
-        padding: 8px;
+        gap: 20px;
+        margin-top: 10px;
+        color: #000;
+        text-decoration: none;
     }
-
-    .article-image {
-        width: 50px;
-        height: 100%;
-        margin-left: 0px;
-    }
-
-    .article-content {
-        width: auto;
-        margin-left: 5vmin;
-    }
-
-    .home-article img {
-        aspect-ratio: 1;
-        margin-left: 0px;
+    .article img {
         width: 48px;
-        height: 100%;
-        object-fit: fill;
+        height: 48px;
+        vertical-align: middle;
+    }
+    .article p {
+        margin-top: 0px;
+    }
+    .article div:nth-child(1) {
+        width: 48px;
+        height: 48px;
     }
 </style>
-<section class="articles" id="articulos">
-    {
-        blogs.map(blog => (
-            <a href={blog.url} class="home-article">
-                <div class="article-image">
-                    <img data-src={blog.image} alt={`Imagen de artículo sobre ${blog.title}`}>
-                </div>
-                <div class="article-content">
-                    <h3>{blog.title}</h3>
-                    <span>{blog.date}</span>
-                </div>
-            </a>
-        ))
-    }
+<section id="articulos">
+    {blogs.map(blog => (
+        <a class="article" href={blog["url"]}>
+            <div class="blog-image">
+                <img data-src={blog["image"]} alt={`Imagne del artículo ${blog["title"]}`}>    
+            </div>
+            <div class="blog-content">
+                <h3>
+                    {blog["title"]}
+                </h3>
+                <p>
+                    {blog["date"]}    
+                </p>
+            </div>    
+        </a>
+    ))}
 </section>
