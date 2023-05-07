@@ -22,7 +22,6 @@ body {
     Lazy
 */
 img {
-    transition: 250ms;
     opacity: 0;
 }
 .fade {
@@ -146,8 +145,6 @@ header p {
     Main content
 */
 main {
-    max-width: 50rem;
-    padding: 10px;
     padding-bottom: 180px;
 
     margin-top: 40px;
@@ -172,6 +169,8 @@ main p {
     Sections
 */
 section {
+    padding: 10px;
+    max-width: 50rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -248,17 +247,6 @@ section#tecnologias {
 /*
     Articles
 */
-
-/*
-    Code
-*/
-p code {
-    border-radius: 7px;
-    background-color: rgb(87, 33, 233);
-}
-pre{margin-top: 40px; margin-bottom: 40px;}
-code,pre{font-family:Operator Mono,Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-feature-settings: "liga", "calt";color:#fff;width:100%;background-color:#2f2e3c;tab-size:4;max-width:100%}pre code{display:block;overflow-x:auto;padding:1em}code{padding:3px 5px;}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e0aa6c;font-weight:600}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
-
 @media (max-width: 450px) {
     nav .links {
         display: none;
