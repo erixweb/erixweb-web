@@ -26,7 +26,7 @@ const { frontmatter } = Astro.props
             
             highlight.src = "/static/highlight.js"
             await document.body.append(highlight)
-            document.querySelectorAll("pre").forEach(pre => pre.setAttribute("class", "language-html"))
+            document.querySelectorAll("pre").forEach(pre => pre.className += " language-js")
         })
     </script>
     <style is:inline>
