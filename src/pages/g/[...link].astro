@@ -1,0 +1,15 @@
+---
+const pages = [
+    {
+        link: "twitter",
+        redirect: "https://twitter.com/erixweb"
+    },
+    {
+        link: "wetspain",
+        redirect: "https://wetspain.vercel.app"
+    },
+]
+const { link } = Astro.params 
+const page = pages.find((page) => page.link === link);
+return Astro.redirect(page.redirect)
+---
