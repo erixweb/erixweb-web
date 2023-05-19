@@ -8,6 +8,10 @@ const pages = [
         link: "wetspain",
         redirect: "https://wetspain.vercel.app"
     },
+    {
+        link: "socketgame",
+        redirect: "https://github.com/erixweb/socketgame",
+    }
 ]
 const { link } = Astro.params 
 const page = pages.find((page) => page.link === link);
