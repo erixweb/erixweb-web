@@ -1,12 +1,12 @@
 ---
-import projects from "../../store/projects"
+import projects from "../../store/projects";
 
 interface Props {
     slice: number;
 }
-const { slice } = Astro.props
-
+const { slice } = Astro.props;
 ---
+
 <style is:inline>
     .projects {
         display: flex;
@@ -16,17 +16,17 @@ const { slice } = Astro.props
         margin-bottom: 40px;
         gap: 20px;
     }
-    
+
     .projects a.project {
         text-decoration: none;
         color: black;
     }
-    
+
     .project {
         position: relative;
         transition: 550ms;
         background-color: #ededed;
-    
+
         box-shadow: 1px 1px 1px rgba(218, 218, 218, 0.485);
         padding-bottom: 16px;
         border-radius: 7px;
@@ -40,7 +40,7 @@ const { slice } = Astro.props
     .project div:nth-child(1) {
         height: 180px;
     }
-    
+
     .project:hover {
         box-shadow: 1px 1px 50px rgba(171, 171, 171, 0.26);
     }
@@ -51,7 +51,7 @@ const { slice } = Astro.props
     .project:hover img {
         object-view-box: inset(10%);
     }
-    
+
     .project p,
     .project h3 {
         padding-left: 1.5vmin;
@@ -59,11 +59,11 @@ const { slice } = Astro.props
         width: 100%;
         margin-left: 0px;
     }
-    
+
     .project h3 {
         font-size: 24px;
     }
-    
+
     .project img {
         aspect-ratio: 16/8;
         object-fit: fill;
@@ -100,34 +100,47 @@ const { slice } = Astro.props
     }
 </style>
 <section class="projects">
-    <h2>
-        Proyectos
-    </h2>
+    <h2>Proyectos</h2>
     <div class="slider">
-        {projects.slice(0, slice).map(project => (
-            <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
-        ))}
+        {
+            projects
+                .slice(0, slice)
+                .map((project) => (
+                    <img
+                        data-src={project.image}
+                        alt={`Imagen de el proyecto ${project.name}`}
+                        loading="lazy"
+                    />
+                ))
+        }
     </div>
-    {projects.slice(0, slice).map(project => (
+    {
+        projects.slice(0, slice).map((project) => (
             <a class="project" href={project.url} target="_blank">
                 <div>
-                    <img data-src={project.image} alt={`Imagen de el proyecto ${project.name}`} loading="lazy">
+                    <img
+                        data-src={project.image}
+                        alt={`Imagen de el proyecto ${project.name}`}
+                        loading="lazy"
+                    />
                 </div>
                 <div>
-                    <h3>
-                        {project.name} &rarr;  
-                    </h3>
-                    <p>
-                        {project.desc}
-                    </p>
+                    <h3>{project.name} &rarr;</h3>
+                    <p>{project.desc}</p>
                 </div>
             </a>
-    ))}
+        ))
+    }
 </section>
-{slice == 4 ? 
-    <div>
-        <a href="/proyectos" class="showmore">Ver más</a>
-    </div>
-    :
-    ""
+{
+    slice == 4 ? (
+        <div>
+            <a href="/proyectos" class="showmore">
+                Ver más
+            </a>
+        </div>
+    ) : (
+        ""
+    )
 }
+ 
