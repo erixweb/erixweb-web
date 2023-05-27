@@ -24,6 +24,15 @@ import Contact from "../components/Contact.astro";
             script.defer = false 
             document.body.append(script)
         })
+        document.querySelector(".slider").addEventListener("wheel", (e) => {
+            e.preventDefault()
+            let scrollX = document.querySelector(".slider").scrollLeft
+            if (e.wheelDelta > 0) {
+                document.querySelector(".slider").scroll(scrollX + 500, 0)
+            } else {
+                document.querySelector(".slider").scroll(scrollX + -500, 0)
+            }
+        })
     </script>
     <link rel="canonical" href="https://erik.pages.dev">
     <meta name="robots" content="follow, index" />

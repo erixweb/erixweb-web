@@ -29,6 +29,15 @@ const { frontmatter } = Astro.props
             document.querySelectorAll("pre").forEach(pre => pre.className += " language-js")
         })
     </script>
+    <style is:inline> 
+        ol {
+            padding-left: 1.5em;
+            width: 100%;
+        }
+        ol li::marker {
+            color: #ffa930;
+        }
+    </style>
     <style is:inline>
         pre {
             white-space: pre;

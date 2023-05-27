@@ -15,13 +15,3 @@ const Lazy = target => {
 }
 
 elements.forEach(Lazy)
-
-document.querySelector(".slider").addEventListener("wheel", (e) => {
-    e.preventDefault()
-    let scrollX = document.querySelector(".slider").scrollLeft
-    if (e.wheelDelta > 0) {
-        document.querySelector(".slider").scroll(scrollX + 500, 0)
-    } else {
-        document.querySelector(".slider").scroll(scrollX + -500, 0)
-    }
-})

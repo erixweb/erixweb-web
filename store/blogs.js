@@ -1,5 +1,11 @@
 export const blogs = [
     {
+        url: "/articulo/ssr-en-react",
+        title: "Server-Side Rendering explicado",
+        date: "27/05/23",
+        image: "/images/tech/js.svg"
+    },
+    {
         url: "/articulo/cargar-js",
         title: "Cargar JavaScript",
         date: "09/04/23",
