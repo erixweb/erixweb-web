@@ -14,11 +14,11 @@ export const projects = [
         image: "/images/projects/windfullthumb.webp"
     },
     {
-        id: "3",
-        name: "Pywarp",
-        desc: "Pywarp es una terminal con comandos básicos para desarolladores web.",
-        url: "https://erixweb.github.io/pycmd/",
-        image: "/images/projects/pywarp_thumb.webp"
+        id: "7",
+        name: "NexusJS",
+        desc: "NexusJS es una librería para escribir JavaScript en el HTML fácilmente.",
+        url: "https://github.com/erixweb/Nexus",
+        image: "/images/projects/nexusjs.svg"
     },
     {
         id: "4",
@@ -26,6 +26,13 @@ export const projects = [
         desc: "Zastate es un manejador de estados que pesa tan solo 1.2kB.",
         url: "https://zastate.deno.dev",
         image: "/images/projects/zastate_thumb.avif"
+    },
+    {
+        id: "3",
+        name: "Pywarp",
+        desc: "Pywarp es una terminal con comandos básicos para desarolladores web.",
+        url: "https://erixweb.github.io/pycmd/",
+        image: "/images/projects/pywarp_thumb.webp"
     },
     {
         id: "5",
