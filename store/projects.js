@@ -14,13 +14,6 @@ export const projects = [
         image: "/images/projects/windfullthumb.webp"
     },
     {
-        id: "7",
-        name: "NexusJS",
-        desc: "NexusJS es una librería para escribir JavaScript en el HTML fácilmente.",
-        url: "https://github.com/erixweb/Nexus",
-        image: "/images/projects/nexusjs.svg"
-    },
-    {
         id: "4",
         name: "Zastate",
         desc: "Zastate es un manejador de estados que pesa tan solo 1.2kB.",
