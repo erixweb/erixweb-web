@@ -44,11 +44,11 @@ const { slice } = Astro.props;
     .project:hover {
         box-shadow: 1px 1px 50px rgba(171, 171, 171, 0.26);
     }
-    .project img {
+    .project .frontimage img {
         transition: 400ms;
         object-view-box: inset(0%);
     }
-    .project:hover img {
+    .project:hover .frontimage  img {
         object-view-box: inset(10%);
     }
 
@@ -99,6 +99,10 @@ const { slice } = Astro.props;
         object-fit: cover;
         border-radius: 7px;
     }
+    .project .buttons img {
+        width: 60px;
+        height: 60px;
+    }
 </style>
 <section class="projects">
     <h2>Proyectos</h2>
@@ -118,7 +122,7 @@ const { slice } = Astro.props;
     {
         projects.slice(0, slice).map((project) => (
             <a class="project" href={project.url} target="_blank">
-                <div>
+                <div class="frontimage">
                     <img
                         data-src={project.image}
                         alt={`Imagen de el proyecto ${project.name}`}

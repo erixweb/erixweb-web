@@ -102,7 +102,7 @@ nav a {
 header {
     padding: 10px;
     width: 100%;
-    max-width: 50rem;
+    max-width: 45rem;
 }
 header#sobremi {
     margin-top: 140px;
@@ -170,7 +170,7 @@ main p {
 */
 section {
     padding: 10px;
-    max-width: 50rem;
+    max-width: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
