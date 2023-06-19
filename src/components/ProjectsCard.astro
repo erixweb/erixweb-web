@@ -143,13 +143,13 @@ const { slice } = Astro.props;
                     <p>{project.desc}</p>
                 </div>
                 <div class="buttons">
-                    <a href={project.url}>
+                    <a href={project.url} target="_blank" rel="nofollow">
                         <img
                             data-src="/images/visit.svg"
                             alt={`Página web del proyecto ${project.name}`}
                         />
                     </a>
-                    <a href={project.github}>
+                    <a href={project.github} target="_blank" rel="nofollow">
                         <img
                             data-src="/images/social/github.svg"
                             alt={`Github del proyecto ${project.name}`}
