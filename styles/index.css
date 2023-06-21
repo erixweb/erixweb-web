@@ -7,10 +7,12 @@
     word-wrap: break-word;
     word-break: break-word;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     position: relative;
-    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', system-ui, -apple-s ystem, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 16px;
 
     background-color: #e5e7eb;
@@ -196,7 +198,7 @@ section#social a {
 }
 
 
-section#social img {
+section#social svg {
     margin: 10px;
     width: 36px;
     height: 36px;
