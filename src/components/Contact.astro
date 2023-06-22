@@ -1,4 +1,9 @@
 ---
+interface Props {
+    language: string
+}
+
+const { language } = Astro.props
 ---
 <style is:inline>
     #contactme {
@@ -18,7 +23,7 @@
 </style>
 <section id="contactme">
     <h1>
-        Contáctame
+        { language === "es" ? "Contáctame" : "Contacta'm"}
     </h1>
     <a href="mailto:erikmorenodev@gmail.com">
         erikmorenodev@gmail.com

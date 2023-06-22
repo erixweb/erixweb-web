@@ -1,22 +1,52 @@
 ---
-import TwitterIcon from "./TwitterIcon.astro"
-import GithubIcon from './GithubIcon.astro'
+import TwitterIcon from "./Icons/TwitterIcon.astro"
+import GithubIcon from './Icons/GithubIcon.astro'
+
+interface Props {
+    language: string
+}
+
+const { language } = Astro.props
 ---
-<header id="sobremi">
-    <div>
-        <h1>Erik 👋</h1>
-        <p>
-            Hola, me llamo Erik. Soy un desarollador Front-End 📱 y Back-End 🗄️ web catalán en Barcelona (Badalona) 🏙️. 
-        </p>
-    </div>
-</header>
-<section id="social">
-    <div>
-        <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
-            <GithubIcon />
-        </a>
-        <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
-           <TwitterIcon /> 
-        </a>
-    </div>
-</section>
+{
+    language === "es" ?
+    <header id="sobremi">
+        <div>
+            <h1>Erik 👋</h1>
+            <p>
+                Hola, me llamo Erik. Soy un desarollador Front-End 📱 y Back-End 🗄️ web catalán en Barcelona (Badalona) 🏙️. 
+            </p>
+            <a href="/cat" style="text-align: center; width: 100%; display: block; margin-top: 40px;">Versió en català</a>
+        </div>
+    </header>
+    <section id="social">
+        <div>
+            <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
+                <GithubIcon />
+            </a>
+            <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
+            <TwitterIcon /> 
+            </a>
+        </div>
+    </section>
+    :
+    <header id="sobremi">
+        <div>
+            <h1>Erik 👋</h1>
+            <p>
+                Hola, em dic Erik. Soc un desenvolupador web Front-End 📱 i Back-End 🗄️ català a Barcelona (Badalona) 🏙️. 
+            </p>
+            <a href="/" style="text-align: center; width: 100%; display: block; margin-top: 40px;">Versión en castellano</a>
+        </div>
+    </header>
+    <section id="social">
+        <div>
+            <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
+                <GithubIcon />
+            </a>
+            <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
+            <TwitterIcon /> 
+            </a>
+        </div>
+    </section>
+}

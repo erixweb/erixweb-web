@@ -1,5 +1,13 @@
+---
+interface Props {
+    language: string
+}
+
+const { language } = Astro.props
+---
+
 <section id="tecnologias">
-    <h2>Tecnologías</h2>
+    {language === "es" ? <h2>Tecnologías</h2> : <h2>Tecnologies</h2>}
     <div class="tech-cards">
         <div class="tech-card">
             <img data-src="/images/tech/html.svg" alt="Etiqueta HTML tecnología">

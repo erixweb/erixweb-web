@@ -1,13 +1,13 @@
 ---
 import "/styles/index.css"
-import ProjectsCard from "../components/ProjectsCard.astro";
-import Header from "../components/Header.astro";
-import About from "../components/About.astro";
-import TechCards from "../components/TechCards.astro";
-import Navigation from "../components/Navigation.astro";
-import Blogs from "../components/Blogs.astro";
-import Footer from "../components/Footer.astro";
-import Contact from "../components/Contact.astro";
+import ProjectsCard from "../../components/ProjectsCard.astro";
+import Header from "../../components/Header.astro";
+import About from "../../components/About.astro";
+import TechCards from "../../components/TechCards.astro";
+import Navigation from "../../components/Navigation.astro";
+import Blogs from "../../components/Blogs.astro";
+import Footer from "../../components/Footer.astro";
+import Contact from "../../components/Contact.astro";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -56,14 +56,14 @@ import Contact from "../components/Contact.astro";
 </head>
 <body>
     <Navigation />
-    <Header language="es"/>
+    <Header language="cat"/>
     <main>
-        <About language="es" />
-        <TechCards language="es" />
-        <ProjectsCard slice={4} language="es"/>
+        <About language="cat"/>
+        <TechCards language="cat"/>
+        <ProjectsCard slice={4} language="cat" />
         <Blogs />
-        <Contact language="es" />
+        <Contact language="cat" />
 	</main>
-    <Footer language="es" />
+    <Footer language="cat"/>
 </body>
 </html> 

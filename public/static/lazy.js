@@ -1,11 +1,16 @@
-const elements = document.querySelectorAll("img")
+const images = document.querySelectorAll("img")
+
 
 const Lazy = target => {
     const io = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && entry.target.nodeName.toLocaleLowerCase() === "img") {
+            let elementName = entry.target.nodeName.toLocaleLowerCase()
+            if (entry.isIntersecting && elementName === "img") {
                 const img = entry.target
                 img.setAttribute("src", img.getAttribute("data-src"))
+                img.classList.add("fade")
+                observer.disconnect()
+            } else if (entry.isIntersecting && elementName === "svg") {
                 img.classList.add("fade")
                 observer.disconnect()
             }
@@ -14,4 +19,4 @@ const Lazy = target => {
     io.observe(target)
 }
 
-elements.forEach(Lazy)
+images.forEach(Lazy)

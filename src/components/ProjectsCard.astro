@@ -1,10 +1,12 @@
 ---
-import projects from "../../store/projects";
+import projects from "../../store/projects"
 
 interface Props {
-    slice: number;
+    slice: number
+    language: string
 }
-const { slice } = Astro.props;
+const { slice } = Astro.props
+const { language } = Astro.props
 ---
 
 <style is:inline>
@@ -114,7 +116,7 @@ const { slice } = Astro.props;
     }
 </style>
 <section class="projects">
-    <h2>Proyectos</h2>
+    {language === "es" ? <h2>Proyectos</h2> : <h2>Projectes</h2>}
     <div class="slider">
         {
             projects
@@ -164,7 +166,7 @@ const { slice } = Astro.props;
     slice == 4 ? (
         <div>
             <a href="/proyectos" class="showmore">
-                Ver más
+                {language === "es" ? "Ver más" : "Veure més"}
             </a>
         </div>
     ) : (
