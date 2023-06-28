@@ -10,9 +10,6 @@ const Lazy = target => {
                 img.setAttribute("src", img.getAttribute("data-src"))
                 img.classList.add("fade")
                 observer.disconnect()
-            } else if (entry.isIntersecting && elementName === "svg") {
-                img.classList.add("fade")
-                observer.disconnect()
             }
         })
     })
@@ -20,3 +17,29 @@ const Lazy = target => {
 }
 
 images.forEach(Lazy)
+/*
+async function getPageContent (url) {
+    const req = await fetch(url)
+    const html = await req.text()
+
+    return /<body[^>]*>([\w\W]*)<\/body>/.exec(html)
+}
+async function displayContent (content) {
+    document.startViewTransition(() => {
+        document.body.innerHTML = content
+        const images = document.querySelectorAll("img")
+        images.forEach(Lazy)
+    })
+}
+
+window.navigation.addEventListener("navigate", async (e) => {
+    e.preventDefault()
+    const url = new URL(e.destination.url)
+
+    if (url.origin !== window.location.origin) return
+
+    displayContent(
+        await getPageContent(url)
+    )
+})
+*/
