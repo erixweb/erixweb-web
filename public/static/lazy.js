@@ -17,14 +17,16 @@ const Lazy = target => {
 }
 
 images.forEach(Lazy)
+
+// Routing
 /*
-async function getPageContent (url) {
+async function getPageContent(url) {
     const req = await fetch(url)
     const html = await req.text()
 
     return /<body[^>]*>([\w\W]*)<\/body>/.exec(html)
 }
-async function displayContent (content) {
+async function displayContent(content) {
     document.startViewTransition(() => {
         document.body.innerHTML = content
         const images = document.querySelectorAll("img")
@@ -32,14 +34,56 @@ async function displayContent (content) {
     })
 }
 
-window.navigation.addEventListener("navigate", async (e) => {
-    e.preventDefault()
-    const url = new URL(e.destination.url)
+function isBackNavigation(navigateEvent) {
+    if (navigateEvent.navigationType === 'push' || navigateEvent.navigationType === 'replace') {
+        return false
+    }
+    if (
+        navigateEvent.destination.index !== -1 &&
+        navigateEvent.destination.index < window.navigation.currentEntry.index
+    ) {
+        return true
+    }
+    return false
+}
+async function onLinkNavigate(callback) {
+    window.navigation.addEventListener('navigate', (event) => {
+        const toUrl = new URL(event.destination.url)
 
-    if (url.origin !== window.location.origin) return
+        if (window.location.origin !== toUrl.origin) return
 
-    displayContent(
-        await getPageContent(url)
-    )
+        const fromPath = window.location.pathname
+        const isBack = isBackNavigation(event)
+
+        event.intercept({
+            async handler() {
+                if (event.info === 'ignore') return
+
+                await callback({
+                    toPath: toUrl.pathname,
+                    fromPath,
+                    isBack
+                })
+            }
+        })
+    })
+}
+async function loadScript(scriptPath) {
+    const req = await fetch(scriptPath)
+    const content = req.text()
+    return await content
+}
+
+onLinkNavigate(async ({ toPath }) => {
+    const content = await getPageContent(toPath)
+
+    document.startViewTransition(async () => {
+        await displayContent(
+            content
+        )
+        if (toPath.startsWith("/articulo/")) {
+            eval(loadScript("/static/highlight.js"))
+        }
+    })
 })
 */
