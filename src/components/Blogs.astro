@@ -1,40 +1,12 @@
 ---
 import blogs from "../../store/blogs";
 ---
-<style is:inline>
-    #articulos {
-        margin-top: 40px;
-    }
-    .article {
-        padding: 5px;
-        border-radius: 7px;
-        margin-left: 0px;
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-        margin-top: 10px;
-        color: #000;
-        text-decoration: none;
-    }
-    .article img {
-        width: 48px;
-        height: 48px;
-        vertical-align: middle;
-    }
-    .article p {
-        margin-top: 0px;
-    }
-    .article div:nth-child(1) {
-        width: 48px;
-        height: 48px;
-    }
-</style>
 <section id="articulos">
     {blogs.map(blog => (
         <a class="article" href={blog["url"]}>
-            <div class="blog-image">
+            <picture>
                 <img data-src={blog["image"]} alt={`Imagne del artículo ${blog["title"]}`}>    
-            </div>
+            </picture>
             <div class="blog-content">
                 <h3>
                     {blog["title"]}
