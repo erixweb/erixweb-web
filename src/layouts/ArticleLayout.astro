@@ -15,19 +15,6 @@ const { frontmatter } = Astro.props
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Erik | {frontmatter.title}</title>
-    <script defer>
-        window.addEventListener("load", async () => {
-            const script = document.createElement("script")
-            script.src = "/static/lazy.js"
-            script.defer = false 
-            document.body.append(script)
-            const highlight = document.createElement("script")
-            
-            highlight.src = "/static/highlight.js"
-            await document.body.append(highlight)
-            document.querySelectorAll("pre").forEach(pre => pre.className += " language-js")
-        })
-    </script>
     <meta
         name="robots"
         content="follow, index"
@@ -51,6 +38,20 @@ const { frontmatter } = Astro.props
     <meta name="twitter:site" content="@erixweb">
 </head>
 <body id="blog">
+    <script defer>
+        window.addEventListener("load", async () => {
+            const script = document.createElement("script")
+            script.src = "/static/lazy.js"
+            script.defer = false 
+            await document.body.append(script)
+            
+            const highlight = document.createElement("script")
+            
+            highlight.src = "/static/highlight.js"
+            await document.body.append(highlight)
+            document.querySelectorAll("pre").forEach(pre => pre.className += " language-js")
+        })
+    </script>
     <style is:inline> 
         ol {
             padding-left: 1.5em;

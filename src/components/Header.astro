@@ -14,9 +14,11 @@ const { language } = Astro.props
         <div>
             <h1>Erik 👋</h1>
             <p>
-                Hola, me llamo Erik. Soy un desarollador Front-End 📱 y Back-End 🗄️ web catalán en Barcelona (Badalona) 🏙️. 
+                Desarollador Front-End 📱 y Back-End 🗄️ web catalán en Barcelona (Badalona) 🏙️. 
             </p>
-            <a href="/cat" style="text-align: center; width: 100%; display: block; margin-top: 40px;">Versió en català</a>
+            <div class="choose-language">
+                <a href="/cat">Versió en català</a>
+            </div>
         </div>
     </header>
     <section id="social">
@@ -34,16 +36,18 @@ const { language } = Astro.props
         <div>
             <h1>Erik 👋</h1>
             <p>
-                Hola, em dic Erik. Soc un desenvolupador web Front-End 📱 i Back-End 🗄️ català a Barcelona (Badalona) 🏙️. 
+                Desenvolupador web Front-End 📱 i Back-End 🗄️ català a Barcelona (Badalona) 🏙️. 
             </p>
-            <a href="/" style="text-align: center; width: 100%; display: block; margin-top: 40px;">Versión en castellano</a>
+            <div class="choose-language">
+                <a href="/">Versión en castellano</a>
+            </div>
         </div>
     </header>
     <section id="social">
         <div>
             <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
                 <GithubIcon />
-            </a>
+                </a>
             <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
                 <TwitterIcon /> 
             </a>
