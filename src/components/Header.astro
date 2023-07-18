@@ -1,56 +1,20 @@
 ---
-import TwitterIcon from "./Icons/TwitterIcon.astro"
-import GithubIcon from './Icons/GithubIcon.astro'
-
-interface Props {
-    language: string
-}
-
-const { language } = Astro.props
 ---
-{
-    language === "es" ?
-    <header id="sobremi">
-        <div>
-            <h1>Erik 👋</h1>
-            <p>
-                Desarollador Front-End 📱 y Back-End 🗄️ web catalán en Barcelona (Badalona) 🏙️. 
-            </p>
-            <div class="choose-language">
-                <a href="/cat">Versió en català</a>
-            </div>
-        </div>
-    </header>
-    <section id="social">
-        <div>
-            <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
-                <GithubIcon />
-            </a>
-            <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
-            <TwitterIcon /> 
+<header class="home-header">
+    <div class="header-wrapper">
+        <h1>
+            Erik 👋
+        </h1>
+        <strong>
+            Desarollador web Full-Stack
+        </strong>
+        <p>
+            Desarollador web FullStack en Barcelona (Badalona) que lleva 2 años programando. 
+        </p>
+        <div class="buttons">
+            <a href="mailto:erikmorenodev@gmail.com" target="_blank">
+                Contáctame
             </a>
         </div>
-    </section>
-    :
-    <header id="sobremi">
-        <div>
-            <h1>Erik 👋</h1>
-            <p>
-                Desenvolupador web Front-End 📱 i Back-End 🗄️ català a Barcelona (Badalona) 🏙️. 
-            </p>
-            <div class="choose-language">
-                <a href="/">Versión en castellano</a>
-            </div>
-        </div>
-    </header>
-    <section id="social">
-        <div>
-            <a href="https://github.com/erixweb" target="_blank" rel="nooponer norefferer">
-                <GithubIcon />
-                </a>
-            <a href="https://twitter.com/erixweb" target="_blank" rel="nooponer norefferer">
-                <TwitterIcon /> 
-            </a>
-        </div>
-    </section>
-}
+    </div>
+</header>

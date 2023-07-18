@@ -1,100 +1,43 @@
 ---
-import "/styles/index.css"
 import Navigation from "../components/Navigation.astro";
-import Footer from "../components/Footer.astro";
+import "../styles/index.css"
 
-const { frontmatter } = Astro.props 
-
+const { frontmatter } = Astro.props
+const {
+    img,
+    title,
+    desc
+} = frontmatter
 
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="/images/er.webp">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erik | {frontmatter.title}</title>
-    <meta
-        name="robots"
-        content="follow, index"
-    />
-    <meta name="title" content={`Erik | ${frontmatter.title}`}>
-    <meta name="description" content={frontmatter.desc}>
-    <meta name="theme-color" content="#45CDFF">
-    <meta name="keywords" content={frontmatter.desc.replace(" ", ",")}>
-    <!-- OpenGraph -->
-    <meta name="og:site_name" content="erixweb.github.io">
-    <meta name="og:image" content="/images/er.webp">
-    <meta name="og:title" content={`Erik | ${frontmatter.title}`}>
-    <meta name="og:description" content={frontmatter.desc}>
-    <meta name="og:locale" content="es_ES">
-    <meta name="og:type" content="website">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@erixweb">
-    <meta name="twitter:image" content="/images/er.webp">
-    <meta name="twitter:domain" content="erik.pages.dev">
-    <meta name="twitter:site" content="@erixweb">
+    <title>Erik</title>
+    <link rel="icon" href="/images/erik.webp">
+    
+    <link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" type="font/woff2" crossorigin>
+    <script src="/scripts/view.js" defer></script>
 </head>
-<body id="blog">
-    <script defer>
-        window.addEventListener("load", async () => {
-            const script = document.createElement("script")
-            script.src = "/static/lazy.js"
-            script.defer = false 
-            await document.body.append(script)
-            
-            const highlight = document.createElement("script")
-            
-            highlight.src = "/static/highlight.js"
-            await document.body.append(highlight)
-            document.querySelectorAll("pre").forEach(pre => pre.className += " language-js")
-        })
-    </script>
-    <style is:inline> 
-        ol {
-            padding-left: 1.5em;
-            width: 100%;
-        }
-        ol li::marker {
-            color: #ffa930;
-        }
-    </style>
-    <style is:inline>
-        pre {
-            white-space: pre;
-            background:#000;
-            border-radius: 10px;
-            border: 1px solid transparent;
-            margin: auto;
-            width: 100%;
-            max-width: 100%;
-        }
-        pre:hover {
-            transition: 250ms;
-            border: 1px solid white;
-        }
-        code[class*=language-],pre[class*=language-]{color:#9efeff;direction:ltr;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;hyphens:none;font-family:Operator Mono,Fira Code,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-weight:400;font-size:17px;line-height:25px;letter-spacing:.5px;text-shadow:0 1px #222245}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{color:inherit;background:#a599e9}code[class*=language-] ::-moz-selection,code[class*=language-] ::selection,code[class*=language-]::-moz-selection,code[class*=language-]::selection,pre[class*=language-] ::-moz-selection,pre[class*=language-] ::selection,pre[class*=language-]::-moz-selection,pre[class*=language-]::selection{color:inherit;background:#a599e9}pre[class*=language-]{padding:2em;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#25252d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em}.token{font-weight:400}.token.cdata,.token.comment,.token.prolog{color:#b362ff}.token.atrule,.token.builtin,.token.delimiter,.token.doctype,.token.important,.token.keyword,.token.selector,.token.tag,.token.tag .punctuation{color:#ff9d00}.token.attr-name,.token.operator{color:#ffb454}.token.punctuation{color:#fff}.token.boolean,.token.constant,.token.number,.token.property,.token.variable{color:#ff628c}.token.entity,.token.symbol{color:#6897bb}.token.char,.token.string{color:#a5ff90}.token.attr-value,.token.attr-value .punctuation{color:#a5c261}.token.attr-value .punctuation:first-child,code.language-css .token.property,code.language-css .token.property+.token.punctuation{color:#a9b7c6}.token.url{color:#287bde;text-decoration:underline}.token.function{color:#fad000}.token.regex{background:#364135}.token.bold{font-weight:700}.token.italic{font-style:italic}.token.inserted{background:#0f0}.token.deleted{background:#ff000d}code.language-css .token.id,code.language-css .token.selector>.token.attribute,code.language-css .token.selector>.token.class,code.language-css .token.selector>.token.pseudo-class,code.language-css .token.selector>.token.pseudo-element{color:#ffc66d}.token.class-name{color:#fb94ff}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{background:0 0}.line-highlight.line-highlight{margin-top:36px;background:linear-gradient(90deg,rgba(98, 101, 255, 0.17),transparent)}.line-highlight.line-highlight:before,.line-highlight.line-highlight[data-end]:after{content:""}
-    </style>
+<body>
     <Navigation />
-    <header id="blog-header" style="margin-top: 140px">
-        <img data-src={frontmatter.img} alt={`Imagen del lenguaje/Biblioteca usada en el blog ${frontmatter.title}`}/>
-        <div>
-            <h1>
-                {frontmatter.title}
-            </h1>
+    <header class="article-header">
+        <img src={img} alt="">
+        <div class="content">
+            <h2>
+                {title}
+            </h2>
             <p>
-                {frontmatter.desc}
+                {desc}
             </p>
         </div>
     </header>
-    <main style="margin-top: 40px;">
-        <section>
-		    <slot />
-        </section>
-	</main>
-    <Footer language="es" />
-
+    <main style="margin-top: 60px;">
+        <slot />
+    </main>
 </body>
 </html>

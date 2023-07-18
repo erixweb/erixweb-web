@@ -1,21 +1,22 @@
+---
+import GithubIcon from "./Icons/GithubIcon.astro"
+import Instagram from "./Icons/InstagramIcon.astro"
+---
+
 <nav>
-    <div class="wrap">
-        <img data-src="/images/er.webp" alt="Logo de erixweb" loading="lazy" decoding="async">
-        <div class="links"> 
+    <div class="wrapper">
+        <div class="logo">
             <a href="/">
-                Sobre mí
-            </a>
-            <a href="/#proyectos">
-                Proyectos
-            </a>
-            <a href="/#articulos">
-                Artículos
+                erik
             </a>
         </div>
-        <button onclick="if (document.querySelector('nav').querySelector('.links').style.display != 'flex') {document.querySelector('nav').querySelector('.links').style.display = 'flex'} else {document.querySelector('nav').querySelector('.links').style.display = 'none'}">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-        </button>
+        <div class="links">
+            <a href="https://github.com/erixweb">
+                <GithubIcon />
+            </a>
+            <a href="https://instagram.com/eriknpc_/">
+                <Instagram />
+            </a>
+        </div>
     </div>
 </nav>

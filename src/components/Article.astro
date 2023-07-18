@@ -1,0 +1,40 @@
+---
+import JavaScriptIcon from './Icons/JavaScriptIcon.astro'
+
+interface Props {
+    type: string,
+    title: string,
+    date: string,
+    href: string
+}
+
+const {  
+    type,
+    title,
+    date,
+    href
+} = Astro.props
+
+
+---
+
+<a href={href} class="article">
+    <div class="image">
+        {
+            type === "javascript" ? 
+                <JavaScriptIcon />
+            : 
+                <JavaScriptIcon />
+
+        }
+    </div>
+    <div class="info">
+        <h3>
+            {title}
+        </h3>
+        <small>
+            {date}
+        </small>
+    </div>
+</a>
+

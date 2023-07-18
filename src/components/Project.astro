@@ -1,0 +1,33 @@
+---
+import GithubIcon from './Icons/GithubIcon.astro'
+import Visit from './Icons/Visit.astro'
+interface Props {
+    image: string
+    name: string
+    description: string
+    github: string
+    web: string
+}
+
+const { image, name, description, github, web } = Astro.props
+---
+
+<article class="card">
+    <img src={image} alt=`Imagen del proyecto ${name}` />
+    <div class="content">
+        <h3>
+            {name}
+        </h3>
+        <p>
+            {description}
+        </p>
+    </div>
+    <div class="links">
+        <a href={github} target="_blank">
+            <GithubIcon />
+        </a>
+        <a href={web} target="_blank">
+            <Visit />
+        </a>
+    </div>
+</article>
