@@ -1,5 +1,5 @@
 ---
-layout: "../../layouts/ArticleLayout.astro"
+layout: "~/layouts/ArticleLayout.astro"
 title: "SSR en React"
 img: "/images/jsicon.svg"
 desc: "Te explico qué es Server-Side Rendering (SSR) y por qué te puede beneficiar."
