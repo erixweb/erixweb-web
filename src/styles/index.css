@@ -263,6 +263,7 @@ main h1 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 20px;
 
     width: 100%;
 }
@@ -271,7 +272,7 @@ main h1 {
     background-color: #0a101f;
     border: 15px;
     width: 100%;
-    max-width: 400px;
+    max-width: 370px;
     border-radius: 15px;
 }
 
