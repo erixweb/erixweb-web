@@ -257,12 +257,17 @@ main h1 {
     margin-bottom: 40px;
 }
 .skills .item-skill {
-    border: 2px solid white;
+    border: 2px solid #f3f3f3;
     max-width: 100%;
     border-radius: 99999px;
     background-color: #31363e;
     display: flex;
     padding: 10px 20px 10px 20px;
+    transition: 250ms;
+}
+.skills .item-skill:hover {
+    border: 2px solid #4872ff;
+    background-color: #3b4149;
 }
 .skills .item-skill svg {
     width: 38px;
@@ -295,7 +300,7 @@ main h1 {
 }
 
 .card {
-    background-color: #0a101f;
+    background-color: #1f232e;
     border: 15px;
     width: 100%;
     max-width: 370px;
@@ -317,9 +322,6 @@ main h1 {
     flex-direction: row;
 }
 
-.card .links a:nth-child(1) {
-    border-right: 1px solid gray;
-}
 
 .card .links a {
     text-align: center;
