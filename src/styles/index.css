@@ -245,7 +245,33 @@ main h1 {
 
     text-align: center;
 }
-
+/*
+    Skills
+*/
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 50em;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.skills .item-skill {
+    border: 2px solid white;
+    max-width: 100%;
+    border-radius: 99999px;
+    background-color: #31363e;
+    display: flex;
+    padding: 10px 20px 10px 20px;
+}
+.skills .item-skill svg {
+    width: 38px;
+    height: 38px;
+}
+.skills .item-skill h3 {
+    font-weight: 600;
+    margin-left: 10px;
+}
 /*
     Projects
 */
