@@ -118,11 +118,6 @@ nav .links {
     margin-right: 0px;
 }
 
-nav .links a {
-    color: #fff;
-    text-decoration: none;
-}
-
 nav svg {
     object-fit: fill;
     width: 35px;
