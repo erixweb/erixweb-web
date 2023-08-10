@@ -1,6 +1,6 @@
 const images = document.querySelectorAll("img")
 
-const Lazy = (target) => {
+export const Lazy = (target) => {
   const io = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       let elementName = entry.target.nodeName.toLocaleLowerCase()

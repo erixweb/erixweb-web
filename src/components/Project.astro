@@ -13,7 +13,7 @@ const { image, name, description, github, web } = Astro.props
 ---
 
 <article class="card">
-    <img src={image} alt=`Imagen del proyecto ${name}` />
+    <img data-src={image} alt=`Imagen del proyecto ${name}` />
     <div class="content">
         <h3>
             {name}
@@ -23,10 +23,10 @@ const { image, name, description, github, web } = Astro.props
         </p>
     </div>
     <div class="links">
-        <a href={github} target="_blank">
+        <a href={github} aria-label="Github" target="_blank">
             <GithubIcon />
         </a>
-        <a href={web} target="_blank">
+        <a href={web} aria-label="X/Twitter" target="_blank">
             <Visit />
         </a>
     </div>

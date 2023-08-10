@@ -1,3 +1,5 @@
+import { Lazy } from "./lazy.js"
+
 const getPageBody = async (url) => {
     const req = await fetch(url)
     const res = await req.text()
@@ -28,11 +30,15 @@ window.navigation.addEventListener("navigate", (event) => {
         document.startViewTransition(async () => {
           await updateDOM(data)
           document.documentElement.scrollTop = 0
+          const images = document.querySelectorAll("img")
+          images.forEach(img => Lazy(img))
+          
           if (url.pathname.startsWith("/articulo/")) {
             const fetchScript = await fetch("/js/highlight.js")
             const script = await fetchScript.text()
   
             eval(script)
+            
           }
         })
       },

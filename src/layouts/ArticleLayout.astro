@@ -21,12 +21,13 @@ const {
     
     <link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" type="font/woff2" crossorigin>
-    <script src="/scripts/view.js" defer></script>
+    <script src="/scripts/view.js" type="module" defer></script>
+    <script src="/scripts/lazy.js" type="module" defer></script>
 </head>
 <body>
     <Navigation />
     <header class="article-header">
-        <img src={img} alt="">
+        <img data-src={img} alt="">
         <div class="content">
             <h2>
                 {title}
