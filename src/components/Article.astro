@@ -1,5 +1,6 @@
 ---
 import JavaScriptIcon from './Icons/JavaScriptIcon.astro'
+import TSIcon from './Icons/TSIcon.astro';
 
 interface Props {
     type: string,
@@ -21,10 +22,14 @@ const {
 <a href={href} class="article">
     <div class="image">
         {
-            type === "javascript" ? 
+            type === 'javascript' ? 
                 <JavaScriptIcon />
-            : 
-                <JavaScriptIcon />
+            :
+            type === 'typescript' ? 
+                <TSIcon />
+            :
+            <TSIcon />
+            
         }
     </div>
     <div class="info">

@@ -1,22 +1,22 @@
 ---
-import Navigation from "~/components/Navigation.astro";
-import "~/styles/index.css"
+import Navigation from '~/components/Navigation.astro'
+import '~/styles/index.css'
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erik</title>
-    <link rel="icon" href="/images/erik.webp">
-    <link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" crossorigin="">
-    <link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" crossorigin="">
-    <script src="/scripts/view.js" type="module" defer></script>
-    <script src="/scripts/lazy.js" type="module" defer></script>
-</head>
-<body>
-    <Navigation />
-    <slot />
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Erik</title>
+		<link rel="icon" href="/images/erik.webp" />
+		<link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" crossorigin="" />
+		<link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" crossorigin="" />
+		<script src="/scripts/view.js" type="module" defer></script>
+		<script src="/scripts/lazy.js" type="module" defer></script>
+	</head>
+	<body>
+		<Navigation />
+		<slot />
+	</body>
 </html>

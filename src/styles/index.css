@@ -234,12 +234,34 @@ main p {
     margin-bottom: 40px;
 }
 
-main h1 {
+main h1,
+main h2 {
     margin-top: 40px;
     margin-bottom: 40px;
 
     text-align: center;
 }
+
+main strong {
+    font-weight: 600;
+    color: #ffbd43;
+}
+
+main blockquote {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background-color: #0039aa;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+}
+
+main blockquote p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 /*
     Skills
 */
@@ -250,18 +272,21 @@ main h1 {
     gap: 20px;
     margin-bottom: 40px;
 }
+
 @media (max-width: 850px) {
     .skills {
         display: grid;
-    grid-template-columns: repeat(2, minmax(17ch, 1fr));
+        grid-template-columns: repeat(2, minmax(17ch, 1fr));
     }
 }
+
 @media (max-width: 600px) {
     .skills {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
 .skills .item-skill {
     border: 2px solid #f3f3f3;
     max-width: 100%;
@@ -274,21 +299,25 @@ main h1 {
     max-width: 300px;
     text-align: start;
 }
+
 .skills .item-skill:hover {
     border: 2px solid #4872ff;
     background-color: #3b4149;
 }
+
 .skills .item-skill svg {
     text-align: end;
     margin-right: 0px;
     width: 38px;
     height: 38px;
 }
+
 .skills .item-skill h3 {
     text-align: center;
     width: 100%;
     font-weight: 600;
 }
+
 /*
     Projects
 */
@@ -347,6 +376,11 @@ main h1 {
 .card .links a svg {
     width: 38px;
     height: 38px;
+}
+
+.card .image {
+    width: 100%;
+    height: 250px;
 }
 
 .card img {
@@ -410,6 +444,201 @@ main h1 {
     object-fit: cover;
     width: 48px;
     height: 48px;
+}
+
+code {
+    padding: 6px;
+    color: orange;
+}
+
+pre {
+    white-space: pre;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    margin: auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+pre:hover {
+    border: 1px solid white;
+}
+
+code,
+pre {
+    color: #9efeff;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    hyphens: none;
+    font-family: Operator Mono, Fira Code, Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: .5px;
+    text-shadow: 0 1px #222245
+}
+
+code ::-moz-selection,
+code::-moz-selection,
+pre::-moz-selection,
+pre::-moz-selection {
+    color: inherit;
+    background: #a599e9
+}
+
+code::-moz-selection,
+code ::selection,
+code::-moz-selection,
+code::selection,
+pre ::-moz-selection,
+pre::selection,
+pre::-moz-selection,
+pre::selection {
+    color: inherit;
+    background: #a599e9
+}
+
+pre {
+    transition: 250ms;
+    padding: 16px;
+    overflow: auto
+}
+
+:not(pre)>code,
+pre {
+    background: #25252d
+}
+
+:not(pre)>code {
+    padding: .1em;
+    border-radius: .3em
+}
+
+.token {
+    font-weight: 400
+}
+
+.token.cdata,
+.token.comment,
+.token.prolog {
+    color: #b362ff
+}
+
+.token.atrule,
+.token.builtin,
+.token.delimiter,
+.token.doctype,
+.token.important,
+.token.keyword,
+.token.selector,
+.token.tag,
+.token.tag .punctuation {
+    color: #ff9d00
+}
+
+.token.attr-name,
+.token.operator {
+    color: #ffb454
+}
+
+.token.punctuation {
+    color: #fff
+}
+
+.token.boolean,
+.token.constant,
+.token.number,
+.token.property,
+.token.variable {
+    color: #ff628c
+}
+
+.token.entity,
+.token.symbol {
+    color: #6897bb
+}
+
+.token.char,
+.token.string {
+    color: #a5ff90
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+    color: #a5c261
+}
+
+.token.attr-value .punctuation:first-child,
+code.language-css .token.property,
+code.language-css .token.property+.token.punctuation {
+    color: #a9b7c6
+}
+
+.token.url {
+    color: #287bde;
+    text-decoration: underline
+}
+
+.token.function {
+    color: #fad000
+}
+
+.token.regex {
+    background: #364135
+}
+
+.token.bold {
+    font-weight: 700
+}
+
+.token.italic {
+    font-style: italic
+}
+
+.token.inserted {
+    background: #0f0
+}
+
+.token.deleted {
+    background: #ff000d
+}
+
+code.language-css .token.id,
+code.language-css .token.selector>.token.attribute,
+code.language-css .token.selector>.token.class,
+code.language-css .token.selector>.token.pseudo-class,
+code.language-css .token.selector>.token.pseudo-element {
+    color: #ffc66d
+}
+
+.token.class-name {
+    color: #fb94ff
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url {
+    background: 0 0
+}
+
+.line-highlight.line-highlight {
+    margin-top: 36px;
+    background: linear-gradient(90deg, rgba(98, 101, 255, 0.17), transparent)
+}
+
+.line-highlight.line-highlight:before,
+.line-highlight.line-highlight[data-end]:after {
+    content: ""
 }
 
 @keyframes fade-in {

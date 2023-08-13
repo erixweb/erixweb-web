@@ -1,54 +1,60 @@
 ---
-import PageLayout from "~/layouts/PageLayout.astro"
-import Header from "~/components/Header.astro"
-import Projects from "~/components/Projects.astro"
-import Project from "~/components/Project.astro"
-import Articles from "~/components/Articles.astro"
-import Article from "~/components/Article.astro"
-import Skills from "~/components/Skills.astro"
+import PageLayout from '~/layouts/PageLayout.astro'
+import Header from '~/components/Header.astro'
+import Projects from '~/components/Projects.astro'
+import Project from '~/components/Project.astro'
+import Articles from '~/components/Articles.astro'
+import Article from '~/components/Article.astro'
+import Skills from '~/components/Skills.astro'
 ---
 
 <PageLayout>
-    <Header />
-    <main>
-        <Skills />
-        <Projects>
-            <Project
-                image="/images/astrowiki.webp"
-                name="Astro wiki"
-                description="Encuentra documentación sobre la librería Astro."
-                web="https://astrowiki.vercel.app"
-                github="https://github.com/erixweb/astrowiki"
-            />
-            <Project
-                image="/images/windful.webp"
-                name="WindfulCSS"
-                description="Librería de CSS basada en Tailwind para estilar en línea."
-                web="https://windful.vercel.app"
-                github="https://github.com/erixweb/windfulcss"
-            />
-            <Project
-                image="/images/wetspain.webp"
-                name="WetSpain"
-                description="Revisa el clima en las ciudades más grandes de España."
-                web="https://wetspain.vercel.app"
-                github="https://github.com/erixweb/wetspain"
-            />
-            <Project
-                image="/images/tempsbdn.webp"
-                name="TempsBDN"
-                description="Aplicación web & desktop para ver el clima en Badalona."
-                web="https://tempsbdn.vercel.app"
-                github="https://github.com/erixweb/tempsbdn"
-            />
-        </Projects>
-        <Articles>
-            <Article 
-                title="SSR en Web Components"
-                date="14/07/23"
-                href="/articulos/ssr-web-components"
-                type="javascript"
-            />
-        </Articles>
-    </main>
+	<Header />
+	<main>
+		<Skills />
+		<Projects>
+			<Project
+				image="/images/astrowiki.webp"
+				name="Astro wiki"
+				description="Encuentra documentación sobre la librería Astro."
+				web="https://astrowiki.vercel.app"
+				github="https://github.com/erixweb/astrowiki"
+			/>
+			<Project
+				image="/images/windful.webp"
+				name="WindfulCSS"
+				description="Librería de CSS basada en Tailwind para estilar en línea."
+				web="https://windful.vercel.app"
+				github="https://github.com/erixweb/windfulcss"
+			/>
+			<Project
+				image="/images/wetspain.webp"
+				name="WetSpain"
+				description="Revisa el clima en las ciudades más grandes de España."
+				web="https://wetspain.vercel.app"
+				github="https://github.com/erixweb/wetspain"
+			/>
+			<Project
+				image="/images/tempsbdn.webp"
+				name="TempsBDN"
+				description="Aplicación web & desktop para ver el clima en Badalona."
+				web="https://tempsbdn.vercel.app"
+				github="https://github.com/erixweb/tempsbdn"
+			/>
+		</Projects>
+		<Articles>
+			<Article
+				title="TS para desarolladores JS"
+				date="13/08/23"
+				href="/articulos/ts-para-js-devs"
+				type="typescript"
+			/>
+			<Article
+				title="SSR en Web Components"
+				date="14/07/23"
+				href="/articulos/ssr-web-components"
+				type="javascript"
+			/>
+		</Articles>
+	</main>
 </PageLayout>

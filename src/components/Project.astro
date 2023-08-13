@@ -13,7 +13,9 @@ const { image, name, description, github, web } = Astro.props
 ---
 
 <article class="card">
-    <img data-src={image} alt=`Imagen del proyecto ${name}` />
+    <div class="image">
+        <img data-src={image} alt=`Imagen del proyecto ${name}` />
+    </div> 
     <div class="content">
         <h3>
             {name}
