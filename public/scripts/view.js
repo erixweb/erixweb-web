@@ -38,7 +38,6 @@ window.navigation.addEventListener("navigate", (event) => {
             const script = await fetchScript.text()
   
             eval(script)
-            
           }
         })
       },
