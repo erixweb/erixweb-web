@@ -14,5 +14,3 @@ export const Lazy = (target) => {
   })
   io.observe(target)
 }
-
-images.forEach(Lazy)

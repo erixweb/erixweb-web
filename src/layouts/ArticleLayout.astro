@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 import Navigation from '~/components/Navigation.astro'
 import '~/styles/index.css'
 
@@ -28,8 +29,26 @@ const { img, title, desc } = frontmatter
 			type="font/woff2"
 			crossorigin
 		/>
-		<script src="/scripts/view.js" type="module" defer></script>
-		<script src="/scripts/lazy.js" type="module" defer></script>
+		<script>
+			const Lazy = (target) => {
+				const io = new IntersectionObserver((entries, observer) => {
+					entries.forEach((entry) => {
+						let elementName = entry.target.nodeName.toLocaleLowerCase()
+						if (entry.isIntersecting && elementName === "img") {
+							const img = entry.target
+							img.setAttribute("src", img.getAttribute("data-src"))
+							img.classList.add("fade")
+							observer.disconnect()
+						}
+					})
+				})
+				io.observe(target)
+			}
+			document.addEventListener("astro:page-load", () => {
+				document.querySelectorAll("img").forEach(Lazy)
+			})
+		</script>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Navigation />
