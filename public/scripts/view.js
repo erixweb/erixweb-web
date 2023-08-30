@@ -34,9 +34,6 @@ window.navigation.addEventListener("navigate", (event) => {
           images.forEach(img => Lazy(img))
           
           if (url.pathname.startsWith("/articulo/")) {
-            const fetchScript = await fetch("/js/highlight.js")
-            const script = await fetchScript.text()
-  
             eval(script)
           }
         })
