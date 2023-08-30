@@ -11,9 +11,14 @@ Svelte es **el framework de la web más querido/admirado** por los desarolladore
 
 Svelte es admirado por su sintaxis simple y por su excelente rendimiento. El JavaScript que introduce al cliente es mínimo, o incluso puede llegar a ser nada.  
 
-## ¿Qué más ofrece? 
+## Routing
 
-Con Svelte puedes crear APIs fácilmente creando una ruta llamada +server.js o +server.ts en el caso de que uses TypeScript. Aquí te dejo un ejemplo:
+Puedes crear tus propias rutas creando un directorio con el nombre de la ruta que contenga el archivo +page.svelte. De está manera si creamos el directorio `about` con el archivo `+page.svelte` (`src/about/+page.svelte`), al acceder en mi página a `/about`, veré el contenido del archivo +page.svelte.
+
+
+## ¿Puedo crear mi propia API? 
+
+Con Svelte **puedes crear APIs fácilmente** creando una ruta llamada +server.js o +server.ts en el caso de que uses TypeScript. Aquí te dejo un ejemplo:
 
 ```ts
 import { json } from "@sveltejs/kit"
@@ -26,6 +31,9 @@ export function GET() {
 ```
 
 Simplemente su función es devolver un número entre el 1 y el 6.
+
+
+
 
 ## ¿Es recomendable?
 
