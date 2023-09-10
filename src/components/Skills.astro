@@ -7,55 +7,32 @@ import NextIcon from "./Icons/NextIcon.astro"
 import ReactIcon from "./Icons/ReactIcon.astro"
 import AstroIcon from "./Icons/AstroIcon.astro"
 import Svelte from "./Icons/Svelte.astro"
+import Skill from "./Skill.astro"
 ---
 
-<section class="skills" id="habilidades">
-	<div class="item-skill">
-		<div>
-			<HTMLIcon />
-		</div>
-		<h3>HTML</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<JavaScriptIcon />
-		</div>
-		<h3>JavaScript</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<CSSIcon />
-		</div>
-		<h3>CSS</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<TSIcon />
-		</div>
-		<h3>TypeScript</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<NextIcon />
-		</div>
-		<h3>Next</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<ReactIcon />
-		</div>
-		<h3>React</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<Svelte />
-		</div>
-		<h3>Svelte</h3>
-	</div>
-	<div class="item-skill">
-		<div>
-			<AstroIcon />
-		</div>
-		<h3>AstroJS</h3>
-	</div>
+<section class="grid grid-cols-3 gap-[20px] lg:grid-cols-2 sm:grid-cols-1 pb-[40px]" id="habilidades">
+	<Skill name="HTML">
+		<HTMLIcon />
+	</Skill>
+	<Skill name="CSS">
+		<CSSIcon />
+	</Skill>
+	<Skill name="JavaScript">
+		<JavaScriptIcon />
+	</Skill>
+	<Skill name="TypeScript">
+		<TSIcon />
+	</Skill>
+	<Skill name="React">
+		<ReactIcon />
+	</Skill>
+	<Skill name="Svelte">
+		<Svelte />
+	</Skill>
+	<Skill name="Next">
+		<NextIcon />
+	</Skill>
+	<Skill name="Astro">
+		<AstroIcon />
+	</Skill>
 </section>

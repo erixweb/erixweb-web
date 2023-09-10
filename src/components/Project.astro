@@ -1,35 +1,35 @@
 ---
-import GithubIcon from './Icons/GithubIcon.astro'
-import Visit from './Icons/Visit.astro'
+import GithubIcon from "./Icons/GithubIcon.astro"
+import Visit from "./Icons/Visit.astro"
 interface Props {
-    image: string
-    name: string
-    description: string
-    github: string
-    web: string
+	image: string
+	name: string
+	description: string
+	github: string
+	web: string
 }
 
 const { image, name, description, github, web } = Astro.props
 ---
 
 <article class="card">
-    <div class="image">
-        <img data-src={image} alt=`Imagen del proyecto ${name}` />
-    </div> 
-    <div class="content">
-        <h3>
-            {name}
-        </h3>
-        <p>
-            {description}
-        </p>
-    </div>
-    <div class="links">
-        <a href={github} aria-label="Github" target="_blank">
-            <GithubIcon />
-        </a>
-        <a href={web} aria-label="X/Twitter" target="_blank">
-            <Visit />
-        </a>
-    </div>
+	<div class="image">
+		<img data-src={image} alt=`Imagen del proyecto ${name}` />
+	</div>
+	<div class="content">
+		<h3>
+			{name}
+		</h3>
+		<p>
+			{description}
+		</p>
+	</div>
+	<div class="links">
+		<a href={github} aria-label="Github" target="_blank">
+			<GithubIcon />
+		</a>
+		<a href={web} aria-label="X/Twitter" target="_blank">
+			<Visit />
+		</a>
+	</div>
 </article>
