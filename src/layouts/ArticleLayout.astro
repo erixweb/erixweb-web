@@ -30,13 +30,13 @@ const { img, title, desc } = frontmatter
 			crossorigin
 		/>
 		<script>
-			const Lazy = (target) => {
+			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
 					entries.forEach((entry) => {
 						let elementName = entry.target.nodeName.toLocaleLowerCase()
 						if (entry.isIntersecting && elementName === "img") {
 							const img = entry.target
-							img.setAttribute("src", img.getAttribute("data-src"))
+							img.setAttribute("src", img.getAttribute("data-src")!)
 							img.classList.add("fade")
 							observer.disconnect()
 						}
@@ -66,5 +66,11 @@ const { img, title, desc } = frontmatter
 		<main style="margin-top: 60px;" class="p-[16px] w-full max-w-[50em]">
 			<slot />
 		</main>
+		<style is:inline>
+			main h1, h2, h3 {
+				font-weight: 800;
+				font-size: 25px;
+			}
+		</style>
 	</body>
 </html>
