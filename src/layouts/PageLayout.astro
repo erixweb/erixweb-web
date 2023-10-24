@@ -14,13 +14,13 @@ import '~/styles/index.css'
 		<link rel="preload" href="/fonts/poppinsnormal.woff2" as="font" crossorigin="" />
 		<link rel="preload" href="/fonts/poppins-bold2.woff2" as="font" crossorigin="" />
 		<script>
-			const Lazy = (target) => {
+			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
 					entries.forEach((entry) => {
 						let elementName = entry.target.nodeName.toLocaleLowerCase()
 						if (entry.isIntersecting && elementName === "img") {
 							const img = entry.target
-							img.setAttribute("src", img.getAttribute("data-src"))
+							img.setAttribute("src", img.getAttribute("data-src")!)
 							img.classList.add("fade")
 							observer.disconnect()
 						}
