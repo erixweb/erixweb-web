@@ -6,11 +6,42 @@ import Project from '~/components/Project.astro'
 import Articles from '~/components/Articles.astro'
 import Article from '~/components/Article.astro'
 import Skills from '~/components/Skills.astro'
+import Skill from '~/components/Skill.astro'
+import CataloniaFlag from '~/components/Icons/CataloniaFlag.astro'
+import SpainFlag from '~/components/Icons/SpainFlag.astro'
+import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
 ---
 
 <PageLayout>
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em]">
+		<section class="pb-[40px]">
+			<h1 class="text-[25px] font-bold">
+				Lenguas
+			</h1>
+			<div class="grid grid-cols-3 gap-[20px]">
+				<Skill 
+					name="Castellano"
+				>
+					<SpainFlag />
+				</Skill>
+				<Skill 
+					name="Català"
+				>
+					<CataloniaFlag 
+						width={1260}
+					/>
+				</Skill>
+				<Skill 
+					name="English"
+				>
+					<EnglishFlag />
+				</Skill>
+			</div>
+		</section>
+		<h1 class="text-[25px] font-bold">
+			Tecnologías
+		</h1>
 		<Skills />
 		<Projects>
 			<Project
