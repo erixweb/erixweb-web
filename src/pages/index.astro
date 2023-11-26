@@ -1,15 +1,15 @@
 ---
-import PageLayout from '~/layouts/PageLayout.astro'
-import Header from '~/components/Header.astro'
-import Projects from '~/components/Projects.astro'
-import Project from '~/components/Project.astro'
-import Articles from '~/components/Articles.astro'
-import Article from '~/components/Article.astro'
-import Skills from '~/components/Skills.astro'
-import Skill from '~/components/Skill.astro'
-import CataloniaFlag from '~/components/Icons/CataloniaFlag.astro'
-import SpainFlag from '~/components/Icons/SpainFlag.astro'
-import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
+import Article from "~/components/Article.astro";
+import Articles from "~/components/Articles.astro";
+import Header from "~/components/Header.astro";
+import CataloniaFlag from "~/components/Icons/CataloniaFlag.astro";
+import EnglishFlag from "~/components/Icons/EnglishFlag.astro";
+import SpainFlag from "~/components/Icons/SpainFlag.astro";
+import Project from "~/components/Project.astro";
+import Projects from "~/components/Projects.astro";
+import Skill from "~/components/Skill.astro";
+import Skills from "~/components/Skills.astro";
+import PageLayout from "~/layouts/PageLayout.astro";
 ---
 
 <PageLayout>
@@ -24,7 +24,7 @@ import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
 					name="Castellano"
 				>
 					<SpainFlag />
-				</Skill>
+				</S>
 				<Skill 
 					name="Català"
 				>
@@ -45,11 +45,11 @@ import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
 		<Skills />
 		<Projects>
 			<Project
-				image="/images/astrowiki.webp"
-				name="Astro wiki"
-				description="Encuentra documentación sobre la librería Astro."
-				web="https://astrowiki.vercel.app"
-				github="https://github.com/erixweb/astrowiki"
+				image="/images/svelte-bazar.webp"
+				name="Svelte Bazar"
+				description="Un bazar hecho con SvelteKit."
+				web="https://svelte-bazar.vercel.app"
+				github="https://github.com/erixweb/svelte-bazar"
 			/>
 			<Project
 				image="/images/windful.webp"
@@ -72,7 +72,7 @@ import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
 				web="https://tempsbdn.vercel.app"
 				github="https://github.com/erixweb/tempsbdn"
 			/>
-		</Projects>
+		</Pro>
 		<Articles>
 			<Article
 				title="Svelte es increíble"
@@ -94,4 +94,4 @@ import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
 			/>
 		</Articles>
 	</main>
-</PageLayout>
+</P>
