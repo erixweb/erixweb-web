@@ -1,78 +1,70 @@
 ---
-import Article from "~/components/Article.astro";
-import Articles from "~/components/Articles.astro";
-import Header from "~/components/Header.astro";
-import CataloniaFlag from "~/components/Icons/CataloniaFlag.astro";
-import EnglishFlag from "~/components/Icons/EnglishFlag.astro";
-import SpainFlag from "~/components/Icons/SpainFlag.astro";
-import Project from "~/components/Project.astro";
-import Projects from "~/components/Projects.astro";
-import Skill from "~/components/Skill.astro";
-import Skills from "~/components/Skills.astro";
-import PageLayout from "~/layouts/PageLayout.astro";
+import Article from "~/components/Article.astro"
+import Articles from "~/components/Articles.astro"
+import Header from "~/components/Header.astro"
+import CataloniaFlag from "~/components/Icons/CataloniaFlag.astro"
+import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
+import SpainFlag from "~/components/Icons/SpainFlag.astro"
+import Project from "~/components/Project.astro"
+import Projects from "~/components/Projects.astro"
+import Skill from "~/components/Skill.astro"
+import Skills from "~/components/Skills.astro"
+import PageLayout from "~/layouts/PageLayout.astro"
 ---
 
 <PageLayout>
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em]">
 		<section class="pb-[40px]">
-			<h1 class="text-[25px] font-bold">
-				Lenguas
-			</h1>
+			<h1 class="text-[25px] font-bold text-start">Llengues</h1>
 			<div class="grid grid-cols-3 gap-[20px]">
-				<Skill 
-					name="Castellano"
-				>
+				<Skill name="Castellano">
 					<SpainFlag />
-				</S>
-				<Skill 
-					name="Català"
-				>
-					<CataloniaFlag 
-						width={1260}
-					/>
 				</Skill>
-				<Skill 
-					name="English"
-				>
+				<Skill name="Català">
+					<CataloniaFlag width={1260} />
+				</Skill>
+				<Skill name="English">
 					<EnglishFlag />
 				</Skill>
 			</div>
 		</section>
-		<h1 class="text-[25px] font-bold">
-			Tecnologías
-		</h1>
+		<h1 class="text-[25px] font-bold text-start">Tecnologies</h1>
 		<Skills />
 		<Projects>
 			<Project
 				image="/images/svelte-bazar.webp"
 				name="Svelte Bazar"
-				description="Un bazar hecho con SvelteKit."
 				web="https://svelte-bazar.vercel.app"
 				github="https://github.com/erixweb/svelte-bazar"
-			/>
+			>
+				Un bazar hecho con SvelteKit.
+			</Project>
 			<Project
 				image="/images/windful.webp"
 				name="WindfulCSS"
-				description="Librería de CSS basada en Tailwind para estilar en línea."
 				web="https://windful.vercel.app"
 				github="https://github.com/erixweb/windfulcss"
-			/>
+			>
+				Librería de CSS basada en Tailwind para estilar en línea.
+			</Project>
 			<Project
 				image="/images/lista-libros.webp"
 				name="Lista de Libros"
-				description="Aplicación web hecha con Astro y Svelte de una lista de libros."
 				web="https://libros-lista.vercel.app"
 				github="https://github.com/erixweb/book-list"
-			/>
+			>
+				Aplicación web hecha con Astro y Svelte de una lista de libros.
+			</Project>
 			<Project
 				image="/images/tempsbdn.webp"
 				name="TempsBDN"
-				description="Aplicación web & desktop para ver el clima en Badalona."
 				web="https://tempsbdn.vercel.app"
 				github="https://github.com/erixweb/tempsbdn"
-			/>
-		</Pro>
+			>
+				Aplicación web & desktop para ver el clima en Badalona.
+			</Project>
+		</Projects>
 		<Articles>
 			<Article
 				title="Svelte es increíble"
@@ -94,4 +86,4 @@ import PageLayout from "~/layouts/PageLayout.astro";
 			/>
 		</Articles>
 	</main>
-</P>
+</PageLayout>

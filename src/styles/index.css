@@ -42,8 +42,23 @@
     src: url(/fonts/poppins-bold2.woff2) format("woff2");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
 }
+@font-face {
+    font-family: Onest;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Onest-Medium.woff2) format("woff2");
+}
+@font-face {
+    font-family: Onest;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(/fonts/Onest-Bold.woff2) format("woff2");
+}
+
 :root {
-    --dark-bg-color: #111827;
+    --dark-bg-color: #1e2638;
 }
 
 * {
@@ -56,7 +71,7 @@
 
 body {
     font-family:
-        Poppins,
+        Onest,
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
@@ -139,7 +154,6 @@ main h2 {
     margin-top: 40px;
     margin-bottom: 40px;
 
-    text-align: center;
 }
 
 main strong {
@@ -228,82 +242,8 @@ main blockquote p {
 /*
     Projects
 */
-.projects {
-    width: 100%;
-    max-width: 50em;
-}
-
-.projects h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.projects .wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    width: 100%;
-}
-
-.card {
-    transition: 250ms;
-    background-color: #1f232e;
-    border: 15px;
-    width: 100%;
-    max-width: 370px;
-    border-radius: 15px;
-}
-
-.card:hover {
-    box-shadow: 0px 1px 3px rgb(255, 255, 255, 0.15),
-        0px 6px 12px rgb(255, 255, 255, 0.1);
-}
-
-.card .content {
-    padding: 1em;
-}
-
-.card .content p {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.card .links {
-    border-top: 1px solid gray;
-    display: flex;
-    flex-direction: row;
-}
-
-
-.card .links a {
-    text-align: center;
-    padding: 1em;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    text-decoration: none;
-}
-
-.card .links a svg {
-    width: 38px;
-    height: 38px;
-}
-
-.card .image {
-    width: 100%;
-    height: 250px;
-}
 
 .card img {
-    object-fit: cover;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-
-    width: 100%;
-    height: 250px;
-    transition: 200ms;
     object-view-box: inset(0%);
 }
 

@@ -1,13 +1,13 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Navigation from '~/components/Navigation.astro'
-import '~/styles/index.css'
+import { ViewTransitions } from "astro:transitions"
+import Navigation from "~/components/Navigation.astro"
+import "~/styles/index.css"
 
 const { frontmatter } = Astro.props
 const { img, title, desc } = frontmatter
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -15,20 +15,8 @@ const { img, title, desc } = frontmatter
 		<title>Erik</title>
 		<link rel="icon" href="/images/erik.webp" />
 
-		<link
-			rel="preload"
-			href="/fonts/poppinsnormal.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
-		<link
-			rel="preload"
-			href="/fonts/poppins-bold2.woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
+		<link rel="preload" href="/fonts/Onest-Medium.woff2" as="font" crossorigin="" />
+		<link rel="preload" href="/fonts/Onest-Bold.woff2" as="font" crossorigin="" />
 		<script>
 			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
@@ -53,7 +41,11 @@ const { img, title, desc } = frontmatter
 	<body>
 		<Navigation />
 		<header class="flex flex-row gap-[20px] mt-[120px] max-w-[50em] p-[16px]">
-			<img data-src={img} alt={`Artículo de ${title}`} class="w-[120px] h-[120px] rounded-[10px] mt-0" />
+			<img
+				data-src={img}
+				alt={`Artículo de ${title}`}
+				class="w-[120px] h-[120px] rounded-[10px] mt-0"
+			/>
 			<div class="w-full">
 				<h2 class="text-[25px] font-bold">
 					{title}
@@ -67,11 +59,12 @@ const { img, title, desc } = frontmatter
 			<slot />
 		</main>
 		<style is:inline>
-			main h1, h2, h3 {
+			main h1,
+			h2,
+			h3 {
 				font-weight: 800;
 				font-size: 25px;
 			}
-			
 		</style>
 	</body>
 </html>

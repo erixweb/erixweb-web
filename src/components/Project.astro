@@ -4,32 +4,40 @@ import Visit from "./Icons/Visit.astro"
 interface Props {
 	image: string
 	name: string
-	description: string
 	github: string
 	web: string
 }
 
-const { image, name, description, github, web } = Astro.props
+const { image, name, github, web } = Astro.props
 ---
 
-<article class="card">
-	<div class="image">
-		<img data-src={image} alt=`Imagen del proyecto ${name}` />
-	</div>
-	<div class="content">
-		<h3 class="font-bold text-[20px]">
-			{name}
-		</h3>
-		<p>
-			{description}
+<article class="flex flex-col w-full card">
+	<div class="w-full">
+		<div class="inline-flex items-center justify-center gap-[15px]">
+			<h3 class="font-bold text-[25px] text-amber-200">
+				{name}
+			</h3>
+			<a href={web} aria-label="Visit" target="_blank" class="flex items-center justify-center align-middle text-sky-600">
+				<Visit width="32px" height="32px" />
+			</a>
+			<a href={github} aria-label="Github" target="_blank" class="flex items-center justify-center align-middle text-sky-600">
+				<GithubIcon width="32px" height="32px" />
+			</a>
+		</div>
+		<p class="mt-[10px] mb-[20px]">
+			<slot />
 		</p>
 	</div>
-	<div class="links">
-		<a href={github} aria-label="Github" target="_blank">
-			<GithubIcon />
-		</a>
-		<a href={web} aria-label="X/Twitter" target="_blank">
-			<Visit />
-		</a>
+	<div class="w-full relative">
+		<img
+			data-src={image}
+			class="w-full max-h-[400px] object-cover rounded-[25px] z-[10] transition-all duration-[250ms]"
+			alt=`Imagen del proyecto ${name}`
+		/>
+		<img
+			data-src={image}
+			class="w-full max-h-[400px] object-cover rounded-[25px] blur-sm scale-100 -z-10 absolute top-0 left-0"
+			alt=`Imagen del proyecto ${name}`
+		/>
 	</div>
 </article>
