@@ -4,7 +4,10 @@ import Articles from "~/components/Articles.astro"
 import Header from "~/components/Header.astro"
 import CataloniaFlag from "~/components/Icons/CataloniaFlag.astro"
 import EnglishFlag from "~/components/Icons/EnglishFlag.astro"
+import LanguageIcon from "~/components/Icons/LanguageIcon.astro"
+import ProjectsIcon from "~/components/Icons/ProjectsIcon.astro"
 import SpainFlag from "~/components/Icons/SpainFlag.astro"
+import TechnologyIcon from "~/components/Icons/TechnologyIcon.astro"
 import Project from "~/components/Project.astro"
 import Projects from "~/components/Projects.astro"
 import Skill from "~/components/Skill.astro"
@@ -16,7 +19,10 @@ import PageLayout from "~/layouts/PageLayout.astro"
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em]">
 		<section class="pb-[40px]">
-			<h1 class="text-[25px] font-bold text-start">Llengues</h1>
+			<div class="inline-flex gap-[10px]">
+				<LanguageIcon width="54px" height="54px" />
+				<h1 class="text-[30px] font-bold text-start w-full">Llengues</h1>
+			</div>
 			<div class="grid grid-cols-3 gap-[20px]">
 				<Skill name="Castellano">
 					<SpainFlag />
@@ -29,9 +35,16 @@ import PageLayout from "~/layouts/PageLayout.astro"
 				</Skill>
 			</div>
 		</section>
-		<h1 class="text-[25px] font-bold text-start">Tecnologies</h1>
+		<div class="inline-flex gap-[10px]">
+			<TechnologyIcon width="54px" height="54px" />
+			<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
+		</div>
 		<Skills />
 		<Projects>
+			<div class="inline-flex gap-[10px]" slot="title">
+				<ProjectsIcon width="54px" height="54px" />
+				<h1 class="text-[30px] font-bold text-start w-full">Projectes</h1>
+			</div>
 			<Project
 				image="/images/svelte-bazar.webp"
 				name="Svelte Bazar"
