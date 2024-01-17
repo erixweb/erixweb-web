@@ -1,6 +1,7 @@
 ---
-import GithubIcon from "./Icons/GithubIcon.astro"
-import Visit from "./Icons/Visit.astro"
+import GithubIcon from "./icons/github-icon.astro"
+import Visit from "./icons/link-icon.astro"
+
 interface Props {
 	image: string
 	name: string
@@ -31,7 +32,7 @@ const { image, name, github, web } = Astro.props
 	<div class="w-full relative">
 		<img
 			data-src={image}
-			class="w-full max-h-[400px] object-cover rounded-[25px] z-[10] transition-all duration-[250ms]"
+			class="w-full max-h-[400px] object-cover rounded-[25px] z-[10] transition-all duration-[250ms] aspect-square"
 			alt=`Imagen del proyecto ${name}`
 		/>
 		<img
