@@ -18,7 +18,7 @@ import PageLayout from "~/layouts/PageLayout.astro"
 <PageLayout>
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em]">
-		<section class="pb-[40px]">
+		<section class="pb-[40px]" id="llengues">
 			<div class="inline-flex gap-[10px]">
 				<LanguageIcon width="54px" height="54px" />
 				<h1 class="text-[30px] font-bold text-start w-full">Llengues</h1>
@@ -35,11 +35,13 @@ import PageLayout from "~/layouts/PageLayout.astro"
 				</Skill>
 			</div>
 		</section>
-		<div class="inline-flex gap-[10px]">
-			<TechnologyIcon width="54px" height="54px" />
-			<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
-		</div>
-		<Skills />
+		<section id="tecnologies">
+			<div class="inline-flex gap-[10px]">
+				<TechnologyIcon width="54px" height="54px" />
+				<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
+			</div>
+			<Skills />
+		</section>
 		<Projects>
 			<div class="inline-flex gap-[10px]" slot="title">
 				<ProjectsIcon width="54px" height="54px" />
