@@ -1,8 +1,4 @@
 ---
-interface Props {
-    width: number
-}
-
 const { width } = Astro.props
 ---
 <svg
@@ -13,6 +9,7 @@ const { width } = Astro.props
 	version="1.0"
 	y="0"
 	x="0"
+	{...Astro.props}
 >
 	<rect id="rect586" style="fill-rule:evenodd;fill:#DA121A" height="90" width={width} y="90" x="0"
 	></rect>
