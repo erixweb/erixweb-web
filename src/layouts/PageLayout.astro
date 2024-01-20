@@ -10,8 +10,10 @@ import '~/styles/index.css'
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Erik</title>
 		<link rel="icon" href="/images/erik.webp" />
+		<title>Erik</title>
+		<link rel="preload" as="font" href="/fonts/Onest-Medium.woff2" crossorigin="">
+		<link rel="preload" as="font" href="/fonts/Onest-Bold.woff2" crossorigin="">
 		<script>
 			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
@@ -32,29 +34,6 @@ import '~/styles/index.css'
 			})
 		</script>
 		<ViewTransitions />
-		<AstroFont 
-		config={[
-			{
-			  name: "Onest",
-			  src: [
-				{
-				  style: 'bold',
-				  weight: '400',
-				  path: '/fonts/Onest-Medium.woff2'
-				},
-				{
-				  style: 'bold',
-				  weight: '800',
-				  path: '/fonts/Onest-Bold.woff2'
-				},
-			  ],
-			  preload: true,
-			  display: "swap",
-			  selector: "body",
-			  fallback: "sans-serif",
-			},
-		  ]}
-		/>
 	</head>
 	<body>
 		<Navigation />
