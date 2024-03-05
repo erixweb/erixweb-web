@@ -1,18 +1,18 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Navigation from '~/components/Navigation.astro'
-import '~/styles/index.css'
+import { ViewTransitions } from "astro:transitions"
+import Navigation from "~/components/Navigation.astro"
+import "~/styles/index.css"
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="/images/erik.webp" />
 		<title>Erik</title>
-		<link rel="preload" as="font" href="/fonts/Onest-Medium.woff2" crossorigin="">
-		<link rel="preload" as="font" href="/fonts/Onest-Bold.woff2" crossorigin="">
+		<link rel="preload" as="font" href="/fonts/Onest-Medium.woff2" crossorigin="" />
+		<link rel="preload" as="font" href="/fonts/Onest-Bold.woff2" crossorigin="" />
 		<script>
 			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
@@ -34,7 +34,7 @@ import '~/styles/index.css'
 		</script>
 		<ViewTransitions />
 	</head>
-	<body class="bg-[#1e2638]">
+	<body class="bg-[#0c111c]">
 		<Navigation />
 		<slot />
 	</body>
