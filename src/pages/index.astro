@@ -24,7 +24,7 @@ import Skills from "~/components/Skills.astro"
 				<LanguageIcon width="54px" height="54px" />
 				<h1 class="text-[30px] font-bold text-start w-full">Llengues</h1>
 			</div>
-			<div class="grid grid-cols-3 gap-[20px]">
+			<div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-[20px]">
 				<Skill name="Castellano">
 					<SpainFlag />
 				</Skill>
@@ -48,56 +48,57 @@ import Skills from "~/components/Skills.astro"
 					web="https://tourxcat.vercel.app"
 					github="https://github.com/erixweb/tourxcat"
 				>
-					Pàgina per informar-te de llocs que has de visitar si vens a fer turisme a Catalunya.
+					Pàgina per informar-te de llocs que has de visitar si vens a fer turisme a
+					Catalunya.
 				</Project>
 				<Project
-				image="/images/svelte-bazar.webp"
-				name="Svelte Bazar"
-				web="https://svelte-bazar.vercel.app"
-				github="https://github.com/erixweb/svelte-bazar"
+					image="/images/recordem.webp"
+					name="Recordem-ho"
+					web="https://recordem.vercel.app"
+					github="https://github.com/erixweb/recordem-ho"
 				>
-				Un bazar hecho con SvelteKit.
-			</Project>
-			<Project
-			image="/images/windful.webp"
-			name="WindfulCSS"
-			web="https://windful.vercel.app"
-			github="https://github.com/erixweb/windfulcss"
-			>
-					Librería de CSS basada en Tailwind para estilar en línea.
+					Articles que tracten de la Catalunya medieval.
 				</Project>
 				<Project
-				image="/images/lista-libros.webp"
-				name="Lista de Libros"
-				web="https://libros-lista.vercel.app"
-				github="https://github.com/erixweb/book-list"
+					image="/images/svelte-bazar.webp"
+					name="Svelte Bazar"
+					web="https://svelte-bazar.vercel.app"
+					github="https://github.com/erixweb/svelte-bazar"
 				>
-				Aplicación web hecha con Astro y Svelte de una lista de libros.
-			</Project>
-		</Projects>
-		<div class="inline-flex gap-[10px]">
-			<TechnologyIcon width="54px" height="54px" />
-			<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
-		</div>
-		<Skills />
-	</section>
-	<Articles>
-		<Article
-		title="Svelte es increíble"
-		date="26/08/23"
-		href="/articulos/svelte-es-increible"
-		type="typescript"
-		/>
-		<Article
-		title="TS para desarolladores JS"
-		date="13/08/23"
-		href="/articulos/ts-para-js-devs"
-		type="typescript"
-		/>
-		<Article
-		title="SSR en Web Components"
-		date="14/07/23"
-		href="/articulos/ssr-web-components"
+					Un bazar hecho con SvelteKit.
+				</Project>
+				<Project
+					image="/images/lista-libros.webp"
+					name="Lista de Libros"
+					web="https://libros-lista.vercel.app"
+					github="https://github.com/erixweb/book-list"
+				>
+					Aplicación web hecha con Astro y Svelte de una lista de libros.
+				</Project>
+			</Projects>
+			<div class="inline-flex gap-[10px]">
+				<TechnologyIcon width="54px" height="54px" />
+				<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
+			</div>
+			<Skills />
+		</section>
+		<Articles>
+			<Article
+				title="Svelte es increíble"
+				date="26/08/23"
+				href="/articulos/svelte-es-increible"
+				type="typescript"
+			/>
+			<Article
+				title="TS para desarolladores JS"
+				date="13/08/23"
+				href="/articulos/ts-para-js-devs"
+				type="typescript"
+			/>
+			<Article
+				title="SSR en Web Components"
+				date="14/07/23"
+				href="/articulos/ssr-web-components"
 				type="javascript"
 			/>
 		</Articles>

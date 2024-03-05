@@ -11,22 +11,24 @@ import MailIcon from "./icons/mail-icon.astro"
 			Desenvolupador web FullStack en Barcelona (Badalona) que porta 3 anys programant.
 		</p>
 	</div>
-	<div class="mt-[40px] ml-0 flex gap-[15px]">
+	<div
+		class="mt-[40px] ml-0 grid grid-cols-2 max-w-[500px]:grid-cols-1 max-w-[500px]:m-auto max-w-[500px]	:w-full gap-[15px] w-fit"
+	>
 		<a
 			href="mailto:erikmorenodev@gmail.com"
 			target="_blank"
-			class="border-zinc-500 py-[16px] px-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400"
+			class="border-zinc-500 py-[16px] px-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400 w-full"
 		>
 			<MailIcon width="34px" height="34px" />
-			Contacta'm
+			<span class="w-full">Contacta'm</span>
 		</a>
 		<a
 			href="https://github.com/erixweb/"
 			target="_blank"
-			class="border-zinc-500 py-[16px] p-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400"
+			class="border-zinc-500 py-[16px] p-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400 w-full"
 		>
 			<GithubIcon width="34px" height="34px" />
-			Github
+			<span class="w-full">Github</span>
 		</a>
 	</div>
 </header>

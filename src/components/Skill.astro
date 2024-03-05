@@ -5,11 +5,13 @@ type Props = {
 const { name } = Astro.props
 ---
 
-<article class="habilidad flex justify-center items-center bg-zinc-800 rounded-full py-[10px] px-[18px] gap-[15px] w-full border-slate-400 hover:border-sky-500 hover:bg-zinc-700 border-[2px] duration-300 transition-all cursor-default">
+<article
+	class="habilidad flex justify-center items-center bg-zinc-800 rounded-full py-[10px] px-[18px] gap-[15px] w-full border-slate-400 hover:border-sky-500 hover:bg-zinc-700 border-[2px] duration-300 transition-all cursor-default"
+>
 	<div class="w-[48px] h-[48px] ml-[0px]">
 		<slot />
 	</div>
-	<h3 class="ml-[0px] w-full lg:ml-auto lg:text-center">
+	<h3 class="ml-[0px] w-full lg:ml-auto">
 		{name}
 	</h3>
 </article>
