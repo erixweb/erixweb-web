@@ -30,25 +30,29 @@ const { image, name, github, web } = Astro.props
 			<h3 class="font-bold text-[25px] text-amber-200">
 				{name}
 			</h3>
-			<a
-				href={web}
-				aria-label="Visit"
-				target="_blank"
-				class="flex items-center justify-center align-middle text-sky-600"
-			>
-				<Visit width="32px" height="32px" />
-			</a>
-			<a
-				href={github}
-				aria-label="Github"
-				target="_blank"
-				class="flex items-center justify-center align-middle text-sky-600"
-			>
-				<GithubIcon width="32px" height="32px" />
-			</a>
 		</div>
 		<p class="mt-[10px] mb-[20px]">
 			<slot />
+			<div class="flex gap-[20px] w-fit ml-0">
+				<a
+					href={web}
+					aria-label="Visit"
+					target="_blank"
+					class="flex justify-center items-center gap-[10px] bg-slate-800 py-[8px] px-[16px] rounded-[12px] border-[0.5px] border-slate-400"
+				>
+					<Visit width="32px" height="32px" />
+					Visitar
+				</a>
+				<a
+					href={github}
+					aria-label="Github"
+					target="_blank"
+					class="flex justify-center items-center gap-[10px] bg-slate-800 py-[8px] px-[16px] rounded-[12px] border-[0.5px] border-slate-400"
+				>
+					<GithubIcon width="32px" height="32px" />
+					Codi
+				</a>
+			</div>
 		</p>
 	</div>
 </article>
