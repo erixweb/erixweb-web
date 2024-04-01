@@ -9,29 +9,35 @@ import MailIcon from "./icons/mail-icon.astro"
       dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 >
 </div>
-<header class="flex flex-col justify-center items-center p-[16px] w-full mt-[200px] max-w-[50em]">
+<header class="flex flex-col justify-center items-center px-[25px] w-full mt-[200px] max-w-[50em]">
 	<div class="w-full">
-		<h1 class="text-[60px] font-[Onest] font-bold">Sóc Erik 👋</h1>
-		<strong class="text-[27px]"> Desenvolupador web Full-Stack</strong>
-		<p class="mt-[20px] text-zinc-400 max-w-[500px] text-[20px]">
+		<h1 class="text-[60px] font-[Onest] font-bold animate-fade-in-right animate-duration-500">
+			Bon dia, sóc Erik 👋
+		</h1>
+		<p class="text-[27px] animate-fade-in-right animate-duration-600 font-bold">
+			Desenvolupador web Full-Stack
+		</p>
+		<p
+			class="mt-[20px] text-zinc-400 max-w-[600px] text-[20px] animate-fade-in-right animate-duration-700"
+		>
 			Desenvolupador web FullStack en Barcelona (Badalona) que porta 3 anys programant.
 		</p>
 	</div>
 	<div
-		class="mt-[40px] ml-0 grid grid-cols-2 max-w-[500px]:grid-cols-1 max-w-[500px]:m-auto max-w-[500px] :w-full gap-[15px] w-fit"
+		class="mt-[40px] ml-0 flex max-w-[500px]:m-auto max-w-[700px]:w-full gap-[15px] w-fit animate-fade-in-right animate-duration-800"
 	>
 		<a
 			href="mailto:erikmorenodev@gmail.com"
 			target="_blank"
-			class="border-zinc-500 py-[16px] px-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400 w-full"
+			class="border-zinc-500 py-[16px] px-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px]"
 		>
 			<MailIcon width="34px" height="34px" />
-			<span class="w-full">Contacta'm</span>
+			<span class="w-full">erikmorenodev@gmail.com</span>
 		</a>
 		<a
 			href="https://github.com/erixweb/"
 			target="_blank"
-			class="border-zinc-500 py-[16px] p-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px] text-slate-400 w-full"
+			class="border-zinc-500 py-[16px] p-[20px] border-[2px] bg-zinc-900 rounded-full hover:bg-zinc-800 hover:border-zinc-400 transition-[250ms] flex items-center gap-[10px]"
 		>
 			<GithubIcon width="34px" height="34px" />
 			<span class="w-full">Github</span>
