@@ -13,7 +13,7 @@ En TypeScript, por defecto, existen algunos tipos básicos que debes conocer. Si
 
 ## String
 
-El tipo de dato string representa una **cadena de texto** entre comillas. Un ejemplo sería `"texto"`. 
+El tipo de dato string representa una **cadena de texto** entre comillas. Un ejemplo sería `"texto"`.
 
 ## Number
 
@@ -25,16 +25,12 @@ Puede representar `true` o `false`, en Español **verdadero** o **falso**
 
 ## Object
 
-Un objecto es un contenedor con una **clave** y un **valor**. Un ejemplo sería 
+Un objecto es un contenedor con una **clave** y un **valor**. Un ejemplo sería
+
 ```js
 {
-    name: 'Erik'
-    languages: [
-        'Español',
-        'Català',
-        'English',
-        'Français'
-    ]
+	name: "Erik"
+	languages: ["Español", "Català", "English", "Français"]
 }
 ```
 
@@ -45,7 +41,7 @@ Un objecto es un contenedor con una **clave** y un **valor**. Un ejemplo sería
 Una vez conoces los tipos básicos, te enseño a **crear tus primeras variables y contantes** en TypeScript. La **sintaxis es la misma** que en JavaScript pero añadiendo el tipo seguido del nombre de la variable y dos puntos.
 
 ```ts
-let name: string = 'Erik'
+let name: string = "Erik"
 ```
 
 En este ejemplo, indicamos que la variable name es del tipo string y su valor es Erik.
@@ -53,12 +49,7 @@ En este ejemplo, indicamos que la variable name es del tipo string y su valor es
 Lo mismo para contantes
 
 ```ts
-const languages: string[] = [
-    'Español',
-    'Català',
-    'English',
-    'Français'
-]
+const languages: string[] = ["Español", "Català", "English", "Français"]
 ```
 
 Si te das cuenta, hemos puesto `[]` al lado de string. Esto es para indicar que es un **array cuyos valores son strings**. Este podría ser también remplazado por `Array<string>`, ambos son sinónimos.
@@ -80,16 +71,16 @@ En TypeScript, puedes crear **tipos personalizados**. Esto lo conseguimos usando
 
 ```ts
 type User = {
-    name: string,
-    mail: string
+	name: string
+	mail: string
 }
 
 const erik: User = {
-    name: 'Erik',
-    mail: 'erikmorenodev@gmail.com'
-} // ✅ 
+	name: "Erik",
+	mail: "erikmorenodev@gmail.com",
+} // ✅
 const randomuser: User = {
-    name: 3,
-    mail: 'example@gmail.com'
+	name: 3,
+	mail: "example@gmail.com",
 } // ❌ La propiedad nombre debe ser de tipo string.
 ```
