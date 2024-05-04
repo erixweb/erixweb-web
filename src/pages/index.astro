@@ -15,6 +15,7 @@ import Projects from "~/components/Projects.astro"
 import Skill from "~/components/Skill.astro"
 import Skills from "~/components/Skills.astro"
 import Experience from "~/components/Experience.astro"
+import FactoryIcon from "~/components/icons/factory-icon.astro"
 ---
 
 <PageLayout>
@@ -23,7 +24,7 @@ import Experience from "~/components/Experience.astro"
 		<section class="pb-[40px]" id="llengues">
 			<div class="inline-flex gap-[10px]">
 				<LanguageIcon width="54px" height="54px" />
-				<h1 class="text-[30px] font-bold text-start w-full">Llengues</h1>
+				<h2 class="text-[30px] font-bold text-start w-full">Llengues</h2>
 			</div>
 			<div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-[20px]">
 				<Skill name="Castellano">
@@ -38,6 +39,12 @@ import Experience from "~/components/Experience.astro"
 			</div>
 		</section>
 		<section id="experiencia" class="relative">
+			<div class="inline-flex gap-[10px]">
+				<FactoryIcon size="54px"/>	
+				<h2 class="text-[30px] font-bold text-start w-full">Experiència</h2>
+			</div>
+
+
 			<Experience />
 		</section>
 		<section id="tecnologies">
