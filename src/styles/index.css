@@ -209,7 +209,16 @@ main blockquote p {
 /*
     Projects
 */
+.card {
+	transition-duration: 500ms;
+	opacity: 0;
+	transform: translateY(40px);
+}
+.card[data-show] {
+	transform: translateY(0px);
 
+	opacity: 1;
+}
 .card img {
 	object-view-box: inset(0%);
 }

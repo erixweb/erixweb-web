@@ -28,7 +28,22 @@ import "~/styles/index.css"
 				})
 				io.observe(target)
 			}
+			export const Animate = (target: any) => {
+				const io = new IntersectionObserver((entries, observer) => {
+					entries.forEach((entry) => {
+						const className = entry.target.className
+						if (entry.isIntersecting) {
+							console.log("xd")
+							const img = entry.target
+							img.setAttribute("data-show", "true")
+							observer.disconnect()
+						}
+					})
+				})
+				io.observe(target)
+			}
 			document.addEventListener("astro:page-load", () => {
+				document.querySelectorAll(".card").forEach(Animate)
 				document.querySelectorAll("img").forEach(Lazy)
 			})
 		</script>
