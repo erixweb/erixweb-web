@@ -1,19 +1,31 @@
+---
+import LanguageIcon from "./icons/language-icon.astro"
+import ProjectsIcon from "./icons/projects-icon.astro"
+import TechnologyIcon from "./icons/technology-icon.astro"
+---
+
 <nav class="fixed top-[10px] left-0 w-full z-[99] px-[10px]">
 	<div class="flex bg-zinc-950/70 max-w-[500px] p-[12px] rounded-full shadow-slate-400 shadow-sm">
 		<a
 			href="/#llengues"
-			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms]"
-			>Llengues</a
+			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms] flex items-center justify-center gap-[7px]"
+		>
+			<LanguageIcon width="25" height="25" />
+			Llengues</a
 		>
 		<a
 			href="/#projectes"
-			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms]"
-			>Projectes</a
+			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms] flex items-center justify-center gap-[7px]"
+		>
+			<ProjectsIcon width="25" height="25" />
+			Projectes</a
 		>
 		<a
 			href="/#tecnologies"
-			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms]"
-			>Tecnologies</a
+			class="text-gray-200 hover:text-amber-200 transition-colors duration-[200ms] flex items-center justify-center gap-[7px]"
+		>
+			<TechnologyIcon width="25" height="25" />
+			Tecnologies</a
 		>
 		<a
 			href="/#articles"
