@@ -37,7 +37,6 @@ import "~/styles/index.css"
 					entries.forEach((entry) => {
 						const className = entry.target.className
 						if (entry.isIntersecting) {
-							console.log("xd")
 							const img = entry.target
 							img.setAttribute("data-show", "true")
 							observer.disconnect()
@@ -45,7 +44,7 @@ import "~/styles/index.css"
 					})
 				})
 				io.observe(target)
-			}
+			}	
 			document.addEventListener("astro:page-load", () => {
 				document.querySelectorAll(".card").forEach(Animate)
 				document.querySelectorAll("img").forEach(Lazy)
