@@ -1,0 +1,37 @@
+<script>
+    function animateMeteor() {
+        const meteor = document.createElement("div")
+
+        meteor.className = "meteor"
+
+        document.querySelector(".meteors")?.append(meteor)
+
+        const left = Math.floor(Math.random() * window.innerWidth) //Math.random() * (100 - 30) + 30
+
+
+        meteor.animate(
+            [
+                {
+                    transform: `translate(${left}px, ${Math.random() * window.innerHeight}px) rotate(145deg)`,
+                    opacity: 0,
+                },
+                {
+                    opacity: 1,
+                },
+                {
+                    transform: `translate(-500px, 100vh) rotate(145deg)`,
+                    opacity: 0.3,
+                },
+            ],
+            {
+                duration: Math.floor(Math.random() * 8 + 4) * 1000,
+            }
+        ).onfinish = () => {
+            meteor.remove()
+        }
+    }
+
+    setInterval(() => {
+        animateMeteor()
+    }, 2000)
+</script>

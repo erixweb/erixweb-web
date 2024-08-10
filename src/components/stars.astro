@@ -1,0 +1,22 @@
+<script>
+    const STARS_NUM = 100
+
+	function createStar() {
+		const star = document.createElement("div")
+		const dimension = Math.random() * (2 - 1) + 1
+
+		star.className = "star"
+		star.style.width = `${dimension}px`
+		star.style.height = `${dimension}px`
+
+        star.style.top = `${Math.random() * window.innerHeight}px`
+        star.style.left = `${Math.random() * window.innerWidth}px`
+        console.log(star)
+
+		document.querySelector(".stars")?.append(star)
+	}
+
+    {Array.from({ length: STARS_NUM }, () => {
+        createStar()
+    })}
+</script>

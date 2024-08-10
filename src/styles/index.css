@@ -214,11 +214,13 @@ main blockquote p {
 	opacity: 0;
 	transform: translateY(40px);
 }
+
 .card[data-show] {
 	transform: translateY(0px);
 
 	opacity: 1;
 }
+
 .card img {
 	object-view-box: inset(0%);
 }
@@ -347,12 +349,12 @@ pre {
 	overflow: auto;
 }
 
-:not(pre) > code,
+:not(pre)>code,
 pre {
 	background: #25252d;
 }
 
-:not(pre) > code {
+:not(pre)>code {
 	padding: 0.1em;
 	border-radius: 0.3em;
 }
@@ -391,4 +393,45 @@ pre {
 	animation:
 		90ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
 		0.3s cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
+}
+
+.meteor {
+	position: absolute;
+	width: 10px;
+	height: 4px;
+}
+
+.meteor::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100px;
+	height: 2px;
+	background: linear-gradient(90deg,
+			rgba(255, 255, 255, 0.4) 0%,
+			rgba(255, 255, 255, 1) 100%);
+	right: 4px;
+	border-radius: 9999px;
+}
+.star {
+	background: #fff;
+	position: absolute;
+	border-radius: 9999px;
+	
+}
+@keyframes fall {
+	0% {
+		transform: translate(100vw, 0px) rotate(-40deg);
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(5px, 100vh) rotate(-40deg);
+		opacity: 0.2;
+	}
 }

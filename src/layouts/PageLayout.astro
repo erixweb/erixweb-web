@@ -1,6 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions"
+import Meteors from "~/components/meteors.astro"
 import Navigation from "~/components/Navigation.astro"
+import Stars from "~/components/stars.astro"
 import "~/styles/index.css"
 ---
 
@@ -13,6 +15,8 @@ import "~/styles/index.css"
 		<title>Erik</title>
 		<link rel="preload" as="font" href="/fonts/Onest-Medium.woff2" crossorigin="" />
 		<link rel="preload" as="font" href="/fonts/Onest-Bold.woff2" crossorigin="" />
+		<Meteors />
+		<Stars />
 		<script>
 			const Lazy = (target: any) => {
 				const io = new IntersectionObserver((entries, observer) => {
@@ -49,7 +53,7 @@ import "~/styles/index.css"
 		</script>
 		<ViewTransitions />
 	</head>
-	<body class="bg-[#0c111c]">
+	<body class="bg-[#0c111c] w-full min-h-[100vh] h-full">
 		<Navigation />
 		<slot />
 	</body>
