@@ -12,20 +12,20 @@ interface Props {
 const { image, name, github, web } = Astro.props
 ---
 
-<article class="flex md:flex-col w-full gap-[20px] card bg-slate-800/50 shadow-sm shadow-slate-700 p-[12px] rounded-[25px]">
+<article class="flex md:flex-col w-full gap-[20px] card bg-slate-800/50 shadow-sm shadow-slate-700 rounded-[12px]">
 	<div class="w-full relative">
 		<img
 			data-src={image}
-			class="w-full max-h-[250px] object-cover rounded-[25px] z-[10] transition-all duration-[250ms] aspect-square"
+			class="w-full max-h-[250px] object-cover rounded-l-[12px] z-[10] transition-all duration-[250ms] aspect-square"
 			alt=`Imagen del proyecto ${name}`
 		/>
 		<img
 			data-src={image}
-			class="w-full max-h-[250px] object-cover rounded-[25px] blur-sm scale-100 -z-10 absolute top-0 left-0"
+			class="w-full max-h-[250px] object-cover rounded-l-[12px] blur-sm scale-100 -z-10 absolute top-0 left-0"
 			alt=`Imagen del proyecto ${name}`
 		/>
 	</div>
-	<div class="w-full mt-0">
+	<div class="w-full mt-0 p-[12px]">
 		<div class="inline-flex items-center justify-center gap-[15px]">
 			<h3 class="font-bold text-[25px] text-amber-200">
 				{name}
