@@ -1,36 +1,40 @@
 <script>
+    
+    let animating = 0
+
     function animateMeteor() {
-        const meteor = document.createElement("div")
 
-        meteor.className = "meteor"
+        if (animating >= 6) animating = 0
 
-        document.querySelector(".meteors")?.append(meteor)
+        const meteor = document.body.querySelectorAll(".meteor")[animating]
 
         const left = Math.floor(Math.random() * window.innerWidth) //Math.random() * (100 - 30) + 30
-
+        
+        animating++
 
         meteor.animate(
             [
                 {
                     transform: `translate(${left}px, ${Math.random() * window.innerHeight}px) rotate(145deg)`,
                     opacity: 0,
+                    display: "block"
                 },
                 {
-                    opacity: 1,
+                    opacity: 1
                 },
                 {
-                    transform: `translate(-500px, 100vh) rotate(145deg)`,
-                    opacity: 0.3,
+                    transform: `translate(-500px, 120vh) rotate(145deg)`,
+                    opacity: 0.3
                 },
             ],
             {
                 duration: Math.floor(Math.random() * 8 + 4) * 1000,
             }
-        ).onfinish = () => {
-            meteor.remove()
-        }
+        )/*.onfinish = () => {
+            
+        }*/
     }
-
+    
     setInterval(() => {
         animateMeteor()
     }, 2000)

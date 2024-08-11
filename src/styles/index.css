@@ -399,6 +399,7 @@ pre {
 	position: absolute;
 	width: 10px;
 	height: 4px;
+	display: none;
 }
 
 .meteor::before {
