@@ -2,6 +2,7 @@
 import { ViewTransitions } from "astro:transitions"
 import Meteors from "~/components/meteors.astro"
 import Navigation from "~/components/Navigation.astro"
+import SEO from "~/components/SEO.astro"
 import Stars from "~/components/stars.astro"
 import "~/styles/index.css"
 ---
@@ -50,6 +51,7 @@ import "~/styles/index.css"
 			})
 		</script>
 		<ViewTransitions />
+		<SEO />
 	</head>
 	<body class="bg-[#0c111c] w-full min-h-[100vh] h-full">
 		<Navigation />
