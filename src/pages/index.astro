@@ -16,6 +16,8 @@ import Skill from "~/components/Skill.astro"
 import Skills from "~/components/Skills.astro"
 import Experience from "~/components/Experience.astro"
 import FactoryIcon from "~/components/icons/factory-icon.astro"
+import User from "~/components/icons/user.astro"
+import Keyword from "~/components/keyword.astro"
 ---
 
 <PageLayout>
@@ -93,6 +95,19 @@ import FactoryIcon from "~/components/icons/factory-icon.astro"
 				<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
 			</div>
 			<Skills />
+		</section>
+
+		<section>
+			<div class="inline-flex gap-[10px]">
+				<User />	
+				<h2 class="text-[30px] font-bold text-start w-full">Qui sóc?</h2>
+			</div>
+			<p class="m-0 max-w-[600px] py-[2.5px]">
+				Hola, em dic Erik Moreno i sóc un <Keyword size={20} className="from-cyan-300 to-cyan-500">desenvolupador web Full-Stack</Keyword> ubicat a Badalona.
+			</p>
+			<p class="m-0 max-w-[600px] py-[2.5px]">
+				M'especialitzo en tecnologies com <Keyword size={20} className="from-blue-300 to-blue-600">React</Keyword>, <Keyword size={20} className="from-white to-gray-300">Next</Keyword>, <Keyword size={20} className="from-orange-300 to-orange-600">Svelte</Keyword>, <Keyword size={20} className="from-green-300 to-green-600">NodeJS</Keyword> o <Keyword size={20} className="from-purple-400 to-purple-600">PHP</Keyword> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
+			</p>
 		</section>
 		<Articles>
 			<Article

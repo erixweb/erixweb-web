@@ -1,0 +1,8 @@
+---
+export interface Props {
+    size: number
+    className: string
+}
+const { size, className } = Astro.props
+---
+<span class=`bg-clip-text bg-gradient-to-br font-bold ${className} text-transparent text-[${size}px]`><slot /></span>
