@@ -396,6 +396,7 @@ pre {
 }
 
 .meteor {
+	z-index: 99999;
 	position: absolute;
 	width: 10px;
 	height: 4px;

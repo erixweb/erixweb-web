@@ -7,6 +7,7 @@
         if (animating >= 6) animating = 0
 
         const meteor = document.body.querySelectorAll(".meteor")[animating]
+        
 
         const left = Math.floor(Math.random() * window.innerWidth) //Math.random() * (100 - 30) + 30
         
@@ -37,5 +38,6 @@
     
     setInterval(() => {
         animateMeteor()
+        
     }, 2000)
 </script>

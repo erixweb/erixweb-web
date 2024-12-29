@@ -21,8 +21,6 @@ import Keyword from "~/components/keyword.astro"
 ---
 
 <PageLayout>
-	
-	
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em]">
 		<section class="pb-[40px]" id="llengues">
@@ -44,7 +42,7 @@ import Keyword from "~/components/keyword.astro"
 		</section>
 		<section id="experiencia" class="relative">
 			<div class="inline-flex gap-[10px]">
-				<FactoryIcon size="54px"/>	
+				<FactoryIcon size="54px" />
 				<h2 class="text-[30px] font-bold text-start w-full">Experiència</h2>
 			</div>
 
@@ -62,7 +60,11 @@ import Keyword from "~/components/keyword.astro"
 					web="https://astrowiki.vercel.app"
 					github="https://github.com/erixweb/astrowiki"
 				>
-					Llista de preguntes resoltes de Astro.js. Aquest és el meu major projecte personal ja que he aconseguit més de <strong class="text-[22px] font-bold from-purple-600 to-purple-200 bg-gradient-to-r bg-clip-text text-transparent">+20.000 impresions</strong>.
+					Llista de preguntes resoltes de Astro.js. Aquest és el meu major projecte
+					personal ja que he aconseguit més de <strong
+						class="text-[22px] font-bold from-purple-600 to-purple-200 bg-gradient-to-r bg-clip-text text-transparent"
+						>+20.000 impresions</strong
+					>.
 				</Project>
 				<Project
 					image="/images/recordem.webp"
@@ -82,7 +84,7 @@ import Keyword from "~/components/keyword.astro"
 					Catalunya.
 				</Project>
 				<Project
-				image="/images/svelte-bazar.webp"
+					image="/images/svelte-bazar.webp"
 					name="Svelte Bazar"
 					web="https://svelte-bazar.vercel.app"
 					github="https://github.com/erixweb/svelte-bazar"
@@ -97,18 +99,31 @@ import Keyword from "~/components/keyword.astro"
 			<Skills />
 		</section>
 
-		<section>
+		<section class="pb-[100px]">
 			<div class="inline-flex gap-[10px]">
-				<User />	
+				<User />
 				<h2 class="text-[30px] font-bold text-start w-full">Qui sóc?</h2>
 			</div>
 			<p class="m-0 max-w-[600px] py-[2.5px]">
-				Hola, em dic Erik Moreno i sóc un <Keyword size={20} className="from-cyan-300 to-cyan-500">desenvolupador web Full-Stack</Keyword> ubicat a Badalona.
+				Hola, em dic Erik Moreno i sóc un <Keyword
+					size={20}
+					className="from-cyan-300 to-cyan-500">desenvolupador web Full-Stack</Keyword
+				> ubicat a Badalona.
 			</p>
 			<p class="m-0 max-w-[600px] py-[2.5px]">
-				M'especialitzo en tecnologies com <Keyword size={20} className="from-blue-300 to-blue-600">React</Keyword>, <Keyword size={20} className="from-white to-gray-300">Next</Keyword>, <Keyword size={20} className="from-orange-300 to-orange-600">Svelte</Keyword>, <Keyword size={20} className="from-green-300 to-green-600">NodeJS</Keyword> o <Keyword size={20} className="from-purple-400 to-purple-600">PHP</Keyword> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
+				M'especialitzo en tecnologies com <Keyword
+					size={20}
+					className="from-blue-300 to-blue-600">React</Keyword
+				>, <Keyword size={20} className="from-white to-gray-300">Next</Keyword>, <Keyword
+					size={20}
+					className="from-orange-300 to-orange-600">Svelte</Keyword
+				>, <Keyword size={20} className="from-green-300 to-green-600">NodeJS</Keyword> o <Keyword
+					size={20}
+					className="from-purple-400 to-purple-600">PHP</Keyword
+				> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
 			</p>
 		</section>
+		<!-- 
 		<Articles>
 			<Article
 				title="Svelte es increíble"
@@ -129,5 +144,6 @@ import Keyword from "~/components/keyword.astro"
 				type="javascript"
 			/>
 		</Articles>
+		 -->
 	</main>
 </PageLayout>
