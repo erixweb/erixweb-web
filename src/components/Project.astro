@@ -12,7 +12,7 @@ interface Props {
 const { image, name, github, web } = Astro.props
 ---
 
-<article class="flex md:flex-col w-full gap-[20px] card bg-slate-800/50 shadow-sm shadow-slate-700 rounded-[12px]">
+<article class="flex max-md:flex-col w-full gap-[20px] card bg-slate-800/50 shadow-sm shadow-slate-700 rounded-[12px]">
 	<div class="w-full relative">
 		<img
 			data-src={image}
