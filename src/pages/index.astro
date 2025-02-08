@@ -18,6 +18,7 @@ import FactoryIcon from "~/components/icons/factory-icon.astro"
 import User from "~/components/icons/user.astro"
 import Keyword from "~/components/keyword.astro"
 import "@fontsource/onest"
+import NetherlandsFlag from "~/components/netherlands-flag.astro"
 
 ---
 
@@ -25,11 +26,11 @@ import "@fontsource/onest"
 	<Header />
 	<main class="p-[16px] w-full max-w-[50em] m-auto">
 		<section class="pb-[40px]" id="llengues">
-			<div class="inline-flex gap-[10px]">
+			<div class="inline-flex items-center justify-center gap-[10px]">
 				<LanguageIcon width="54px" height="54px" />
 				<h2 class="text-[30px] font-bold font-sans text-start w-full ">{ca.languages.title}</h2>
 			</div>
-			<div class="grid grid-cols-3 max-md:grid-cols-2 sm:grid-cols-1 gap-[20px]">
+			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
 				<Skill name="Castellano">
 					<SpainFlag />
 				</Skill>
@@ -39,19 +40,22 @@ import "@fontsource/onest"
 				<Skill name="English">
 					<EnglishFlag />
 				</Skill>
+				<Skill name="Nederlands">
+					<NetherlandsFlag />
+				</Skill>
 			</div>
 		</section>
 		<section id="experiencia" class="relative">
-			<div class="inline-flex gap-[10px]">
+			<div class="inline-flex items-center justify-center gap-[10px]">
 				<FactoryIcon size="54px" />
-				<h2 class="text-[30px] font-bold text-start w-full">Experiència</h2>
+				<h2 class="text-[30px] font-bold text-start w-full">{ca.experience.title}</h2>
 			</div>
 
 			<Experience />
 		</section>
 		<section id="projectes">
 			<Projects>
-				<div class="inline-flex gap-[10px]" slot="title">
+				<div class="inline-flex gap-[10px] items-center justify-center" slot="title">
 					<ProjectsIcon width="54px" height="54px" />
 					<h1 class="text-[30px] font-bold text-start w-full">Projectes</h1>
 				</div>
@@ -93,14 +97,14 @@ import "@fontsource/onest"
 					Un bazar fet amb SvelteKit.
 				</Project>
 			</Projects>
-			<div class="inline-flex gap-[10px]" id="tecnologies">
+			<div class="inline-flex items-center justify-center gap-[10px]" id="tecnologies">
 				<TechnologyIcon width="54px" height="54px" />
 				<h1 class="text-[30px] font-bold text-start w-full">Tecnologies</h1>
 			</div>
 			<Skills />
 		</section>
 
-		<section class="pb-[100px] w-full m-0">
+		<section class="pb-[100px] w-full m-0" id="sobremi">
 			<div class="inline-flex items-center gap-[10px] w-full align-middle">
 				<User />
 				<h2 class="text-[30px] font-bold text-start w-full">Qui sóc?</h2>
@@ -113,7 +117,7 @@ import "@fontsource/onest"
 				> ubicat a Badalona.
 			</p>
 			<p class="m-0 max-w-[600px] py-[2.5px]">
-				Des de fa anys que programar és la meva passió
+				Des de fa anys que programar és la meva passió programar i m'encanta aprendre coses noves.
 			</p>
 			<p class="m-0 max-w-[600px] py-[2.5px]">
 				M'especialitzo en tecnologies com <Keyword
