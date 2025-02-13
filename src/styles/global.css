@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@plugin "@midudev/tailwind-animations";	
 
 :root {
 	--dark-bg-color: #1e2638;
@@ -7,6 +6,18 @@
 
 @theme {
 	--font-sans: 'Onest', 'sans-serif';
+	--animate-fade-top: fade-top 0.5s ease-in-out;
+
+	@keyframes fade-top {
+		from {
+			opacity: 0.1;
+			transform: translateY(-20px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 * {
@@ -297,6 +308,22 @@ pre {
 :not(pre)>code {
 	padding: 0.1em;
 	border-radius: 0.3em;
+}
+
+.fade-top {
+	opacity: 1;
+
+	animation-name: fade-top;
+}
+@keyframes fade-top {
+	from {
+		opacity: 0.1;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes fade-in {
