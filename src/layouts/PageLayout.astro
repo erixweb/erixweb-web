@@ -4,6 +4,8 @@ import Meteors from "~/components/meteors.astro"
 import Navigation from "~/components/Navigation.astro"
 import SEO from "~/components/SEO.astro"
 import Stars from "~/components/stars.astro"
+import "@fontsource/onest"
+import onest from "@fontsource/onest/files/onest-latin-400-normal.woff2"
 import "~/styles/global.css"
 ---
 
@@ -14,8 +16,7 @@ import "~/styles/global.css"
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" href="/images/erik.webp" />
 		<title>Erik</title>
-		<link rel="preload" as="font" href="/fonts/Onest-Medium.woff2" crossorigin="" />
-		<link rel="preload" as="font" href="/fonts/Onest-Bold.woff2" crossorigin="" />
+		<link rel="preload" href={onest} as="font" type="font/woff2" crossorigin="anonymous" />
 		<Meteors />
 		<Stars />
 		<script>
