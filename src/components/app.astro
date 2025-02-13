@@ -1,0 +1,165 @@
+---
+import type { GetStaticPaths } from "astro"
+import Header from "~/components/Header.astro"
+import PageLayout from "~/layouts/PageLayout.astro"
+
+import CataloniaFlag from "~/components/icons/catalunya-icon.astro"
+import EnglishFlag from "~/components/icons/english-icon.astro"
+import LanguageIcon from "~/components/icons/language-icon.astro"
+import ProjectsIcon from "~/components/icons/projects-icon.astro"
+import SpainFlag from "~/components/icons/spain-flag.astro"
+import TechnologyIcon from "~/components/icons/technology-icon.astro"
+import Project from "~/components/Project.astro"
+import Projects from "~/components/Projects.astro"
+import Skill from "~/components/Skill.astro"
+import Skills from "~/components/Skills.astro"
+import Experience from "~/components/Experience.astro"
+import FactoryIcon from "~/components/icons/factory-icon.astro"
+import User from "~/components/icons/user.astro"
+import Keyword from "~/components/keyword.astro"
+
+import NetherlandsFlag from "~/components/icons/netherlands-flag.astro"
+export interface Props {
+	language: string
+}
+const { language } = Astro.props
+const i18n = await import(`../i18n/${language || "ca"}.json`)
+---
+
+<PageLayout>
+	<Header />
+	<main class="p-[16px] w-full max-w-[50em] m-auto">
+		<section class="pb-[40px]" id="llengues">
+			<div class="inline-flex items-center justify-center gap-[10px]">
+				<LanguageIcon width="54px" height="54px" />
+				<h2 class="text-[30px] font-bold font-sans text-start w-full">
+					{i18n.languages.title}
+				</h2>
+			</div>
+			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
+				<Skill name="Castellano">
+					<SpainFlag />
+				</Skill>
+				<Skill name="Català">
+					<CataloniaFlag width={1260} />
+				</Skill>
+				<Skill name="English">
+					<EnglishFlag />
+				</Skill>
+				<Skill name="Nederlands">
+					<NetherlandsFlag />
+				</Skill>
+			</div>
+		</section>
+		<section id="experiencia" class="relative">
+			<div class="inline-flex items-center justify-center gap-[10px]">
+				<FactoryIcon size="54px" />
+				<h2 class="text-[30px] font-bold text-start w-full">{i18n.experience.title}</h2>
+			</div>
+
+			<Experience />
+		</section>
+		<section id="projectes">
+			<Projects>
+				<div class="inline-flex gap-[10px] items-center justify-center" slot="title">
+					<ProjectsIcon width="54px" height="54px" />
+					<h1 class="text-[30px] font-bold text-start w-full">Projectes</h1>
+				</div>
+				<Project
+					image="/images/astrowiki.avif"
+					name="🥇 Astro Wiki"
+					web="https://astrowiki.vercel.app"
+					github="https://github.com/erixweb/astrowiki"
+				>
+					Llista de preguntes resoltes de Astro.js. Aquest és el meu major projecte
+					personal ja que he aconseguit més de <strong
+						class="text-[22px] font-bold from-purple-600 to-purple-200 bg-gradient-to-r bg-clip-text text-transparent"
+						>+20.000 impresions</strong
+					>.
+				</Project>
+				<Project
+					image="/images/recordem.webp"
+					name="🥈 Pàtria"
+					web="https://recordem.vercel.app"
+					github="https://github.com/erixweb/recordem-ho"
+				>
+					Articles que tracten de la Catalunya medieval.
+				</Project>
+				<Project
+					image="/images/tourxcat.webp"
+					name="🥉 Tour x Catalunya"
+					web="https://tourxcat.vercel.app"
+					github="https://github.com/erixweb/tourxcat"
+				>
+					Pàgina per informar-te de llocs que has de visitar si vens a fer turisme a
+					Catalunya.
+				</Project>
+				<Project
+					image="/images/svelte-bazar.webp"
+					name="Svelte Bazar"
+					web="https://svelte-bazar.vercel.app"
+					github="https://github.com/erixweb/svelte-bazar"
+				>
+					Un bazar fet amb SvelteKit.
+				</Project>
+			</Projects>
+			<div class="inline-flex items-center justify-center gap-[10px]" id="tecnologies">
+				<TechnologyIcon width="54px" height="54px" />
+				<h1 class="text-[30px] font-bold text-start w-full">{i18n.tecnologies.title}</h1>
+			</div>
+			<Skills />
+		</section>
+
+		<section class="pb-[100px] w-full m-0" id="sobremi">
+			<div class="inline-flex items-center gap-[10px] w-full align-middle">
+				<User />
+				<h2 class="text-[30px] font-bold text-start w-full">Qui sóc?</h2>
+			</div>
+
+			<p class="m-[0px] w-full max-w-[600px] py-[2.5px]">
+				Hola, em dic Erik Moreno i sóc un <Keyword
+					size={20}
+					className="from-cyan-300 to-cyan-500">desenvolupador web Full-Stack</Keyword
+				> ubicat a Badalona.
+			</p>
+			<p class="m-0 max-w-[600px] py-[2.5px]">
+				Des de fa anys que programar és la meva passió programar i m'encanta aprendre coses
+				noves.
+			</p>
+			<p class="m-0 max-w-[600px] py-[2.5px]">
+				M'especialitzo en tecnologies com <Keyword
+					size={20}
+					className="from-blue-300 to-blue-600">React</Keyword
+				>, <Keyword size={20} className="from-white to-gray-300">Next</Keyword>, <Keyword
+					size={20}
+					className="from-orange-300 to-orange-600">Svelte</Keyword
+				>, <Keyword size={20} className="from-green-300 to-green-600">NodeJS</Keyword> o <Keyword
+					size={20}
+					className="from-purple-400 to-purple-600">PHP</Keyword
+				> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
+			</p>
+		</section>
+		<!-- 
+		<Articles>
+			<Article
+				title="Svelte es increíble"
+				date="26/08/23"
+				href="/articulos/svelte-es-increible"
+				type="typescript"
+			/>
+			<Article
+				title="TS para desarolladores JS"
+				date="13/08/23"
+				href="/articulos/ts-para-js-devs"
+				type="typescript"
+			/>
+			<Article
+				title="SSR en Web Components"
+				date="14/07/23"
+				href="/articulos/ssr-web-components"
+				type="javascript"
+			/>
+		</Articles>
+		 -->
+	</main>
+</PageLayout>

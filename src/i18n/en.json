@@ -1,0 +1,16 @@
+{
+	"languages": {
+        "title": "Languages"
+    },
+    "experience": {
+        "title": "Experience"
+    },
+    "about": {
+        "title": "Who am I?",
+        "description": "Sóc un desenvolupador web amb més de 5 anys d'experiència en el desenvolupament de llocs web i aplicacions web. M'encanta treballar amb tecnologies web com HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, etc. També m'agrada treballar amb dissenyadors i altres desenvolupadors per crear llocs web i aplicacions web increïbles."
+    },
+    "tecnologies": {
+        "title": "Tecnologies"
+    }
+    
+}

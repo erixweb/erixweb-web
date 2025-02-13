@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from 'astro:transitions';
 import Meteors from "~/components/meteors.astro"
 import Navigation from "~/components/Navigation.astro"
 import SEO from "~/components/SEO.astro"
@@ -51,7 +51,7 @@ import "~/styles/global.css"
 				document.querySelectorAll("img").forEach(Lazy)
 			})
 		</script>
-		<ViewTransitions />
+		<ClientRouter />
 		<SEO />
 	</head>
 	<body class="bg-[#0c111c] w-full min-h-[100vh] h-full">

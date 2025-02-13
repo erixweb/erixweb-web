@@ -13,4 +13,8 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss({ config: "./tailwind.config.cjs" })],
   },
+  i18n: {
+    locales: ["en", "ca"],
+    defaultLocale: "ca",
+  },
 });
