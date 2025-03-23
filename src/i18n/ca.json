@@ -1,9 +1,19 @@
 {
+    "header": {
+        "title": "Bon dia, sóc Erik",
+        "subtitle": "Desenvolupador web Full Stack",
+        "text_1": "Desenvolupador web FullStack a",
+        "highlight_1": "Barcelona",
+        "text_2": "(Badalona) que porta 3 anys programant."
+    },
 	"languages": {
         "title": "Llengues"
     },
     "experience": {
         "title": "Experiència"
+    },
+    "projects": {
+        "title": "Projectes"
     },
     "about": {
         "title": "Quí sóc?",

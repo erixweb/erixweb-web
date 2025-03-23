@@ -1,13 +1,23 @@
 {
+    "header": {
+        "title": "Good morning, I'm Erik",
+        "subtitle": "Full Stack web developer",
+        "text_1": "Full Stack web developer in",
+        "highlight_1": "Barcelona",
+        "text_2": "(Badalona) that has 3 years of programming experience."
+    },
 	"languages": {
         "title": "Languages"
     },
     "experience": {
         "title": "Experience"
     },
+    "projects": {
+        "title": "Projects"
+    },
     "about": {
         "title": "Who am I?",
-        "description": "Sóc un desenvolupador web amb més de 5 anys d'experiència en el desenvolupament de llocs web i aplicacions web. M'encanta treballar amb tecnologies web com HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, etc. També m'agrada treballar amb dissenyadors i altres desenvolupadors per crear llocs web i aplicacions web increïbles."
+        "description": "Sóc un desenvolupador web amb més de 5 anys d'experiència en el desenvolupament de llocs web i aplicacions web. M'encanta treballar amb tecnologies web com HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, etc."
     },
     "tecnologies": {
         "title": "Tecnologies"

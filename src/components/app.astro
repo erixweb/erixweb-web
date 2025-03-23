@@ -1,5 +1,4 @@
 ---
-import type { GetStaticPaths } from "astro"
 import Header from "~/components/Header.astro"
 import PageLayout from "~/layouts/PageLayout.astro"
 
@@ -27,7 +26,7 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 ---
 
 <PageLayout>
-	<Header />
+	<Header translations={i18n.header} />
 	<main class="p-[16px] w-full max-w-[50em] m-auto">
 		<section class="pb-[40px]" id="llengues">
 			<div class="inline-flex items-center justify-center gap-[10px]">
@@ -36,6 +35,7 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 					{i18n.languages.title}
 				</h2>
 			</div>
+			
 			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
 				<Skill name="Castellano">
 					<SpainFlag />
@@ -63,7 +63,7 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 			<Projects>
 				<div class="inline-flex gap-[10px] items-center justify-center" slot="title">
 					<ProjectsIcon width="54px" height="54px" />
-					<h1 class="text-[30px] font-bold text-start w-full">Projectes</h1>
+					<h1 class="text-[30px] font-bold text-start w-full">{i18n.projects.title}</h1>
 				</div>
 				<Project
 					image="/images/astrowiki.avif"
@@ -113,20 +113,20 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 		<section class="pb-[100px] w-full m-0" id="sobremi">
 			<div class="inline-flex items-center gap-[10px] w-full align-middle">
 				<User />
-				<h2 class="text-[30px] font-bold text-start w-full">Qui sóc?</h2>
+				<h2 class="text-[30px] font-bold text-start w-full">{i18n.about.title}</h2>
 			</div>
 
-			<p class="m-[0px] w-full max-w-[600px] py-[2.5px]">
+			<p class="m-[0px] my-[0px] w-full max-w-[600px] py-[2.5px]">
 				Hola, em dic Erik Moreno i sóc un <Keyword
 					size={20}
 					className="from-cyan-300 to-cyan-500">desenvolupador web Full-Stack</Keyword
 				> ubicat a Badalona.
 			</p>
-			<p class="m-0 max-w-[600px] py-[2.5px]">
+			<p class="m-0 my-[0px] max-w-[600px] py-[2.5px]">
 				Des de fa anys que programar és la meva passió programar i m'encanta aprendre coses
 				noves.
 			</p>
-			<p class="m-0 max-w-[600px] py-[2.5px]">
+			<p class="m-0 my-[0px] max-w-[600px] py-[2.5px]">
 				M'especialitzo en tecnologies com <Keyword
 					size={20}
 					className="from-blue-300 to-blue-600">React</Keyword
@@ -138,6 +138,7 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 					className="from-purple-400 to-purple-600">PHP</Keyword
 				> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
 			</p>
+
 		</section>
 		<!-- 
 		<Articles>
