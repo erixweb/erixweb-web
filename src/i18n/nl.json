@@ -1,0 +1,26 @@
+{
+    "header": {
+        "title": "Goedemorgen, Ik heet Erik",
+        "subtitle": "Full Stack webontwikkelaar",
+        "text_1": "Full Stack webontwikkelaar in",
+        "highlight_1": "Barcelona",
+        "text_2": "(Badalona) met meer dan 3 jaar ervaring."
+    },
+	"languages": {
+        "title": "Talen"
+    },
+    "experience": {
+        "title": "Ervaring"
+    },
+    "projects": {
+        "title": "Projecten"
+    },
+    "about": {
+        "title": "Over mij",
+        "description": "Sóc un desenvolupador web amb més de 5 anys d'experiència en el desenvolupament de llocs web i aplicacions web. M'encanta treballar amb tecnologies web com HTML, CSS, JavaScript, React, Node.js, Express, MongoDB, MySQL, etc."
+    },
+    "tecnologies": {
+        "title": "Technologieën"
+    }
+    
+}

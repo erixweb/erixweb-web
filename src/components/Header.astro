@@ -10,8 +10,10 @@ const { translations } = Astro.props
 ---
 
 <header
-	class="flex flex-col justify-center items-center px-[25px] w-full overflow-hidden relative min-h-[100vh] bg-gradient-to-b from-zinc-900 from-50% to-blue-800 border-b-2 border-blue-400"
->
+	class="flex flex-col justify-center items-center px-[25px] w-full overflow-hidden relative min-h-[100vh] backdrop-blur-xl bg-gradient-to-b bg-black to-40%  border-b-2 border-blue-400"
+>	
+	<div class="absolute bg-blue-800 backdrop-blur-xl w-full h-[150px] blur-[300px] top-0 left-0 "></div>
+	<div class="absolute bg-blue-800 backdrop-blur-xl w-full h-[50px] blur-[100px] bottom-0 left-0 "></div>
 	<div class="meteors w-full h-full min-h-[100vh] overflow-hidden absolute top-0 left-0">
 		<div class="meteor"></div>
 		<div class="meteor"></div>
