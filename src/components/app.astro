@@ -31,11 +31,11 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 		<section class="pb-[40px]" id="llengues">
 			<div class="inline-flex items-center justify-center gap-[10px]">
 				<LanguageIcon width="54px" height="54px" />
-				<h2 class="text-[30px]  font-bold font-sans text-start w-full">
+				<h2 class="text-[30px] font-bold font-sans text-start w-full">
 					{i18n.languages.title}
 				</h2>
 			</div>
-			
+
 			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
 				<Skill name="Castellano">
 					<SpainFlag />
@@ -78,8 +78,16 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 					>.
 				</Project>
 				<Project
+					image="/images/cuineria-preview.avif"
+					name="🥈 Cuiner IA"
+					web="https://cuiner-ia.vercel.app"
+					github="https://github.com/erixweb/cuiner-ia"
+				>
+					Un generador de receptes per a cuinar plats amb ingredients que tinguis a casa.
+				</Project>
+				<Project
 					image="/images/recordem.webp"
-					name="🥈 Pàtria"
+					name="🥉 Pàtria"
 					web="https://recordem.vercel.app"
 					github="https://github.com/erixweb/recordem-ho"
 				>
@@ -87,20 +95,12 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 				</Project>
 				<Project
 					image="/images/tourxcat.webp"
-					name="🥉 Tour x Catalunya"
+					name="Tour x Catalunya"
 					web="https://tourxcat.vercel.app"
 					github="https://github.com/erixweb/tourxcat"
 				>
 					Pàgina per informar-te de llocs que has de visitar si vens a fer turisme a
 					Catalunya.
-				</Project>
-				<Project
-					image="/images/svelte-bazar.webp"
-					name="Svelte Bazar"
-					web="https://svelte-bazar.vercel.app"
-					github="https://github.com/erixweb/svelte-bazar"
-				>
-					Un bazar fet amb SvelteKit.
 				</Project>
 			</Projects>
 			<div class="inline-flex items-center justify-center gap-[10px]" id="tecnologies">
@@ -138,7 +138,6 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 					className="from-purple-400 to-purple-600">PHP</Keyword
 				> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
 			</p>
-
 		</section>
 		<!-- 
 		<Articles>
