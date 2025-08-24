@@ -1,0 +1,85 @@
+<nav class="fixed top-0 left-0 w-full p-5 bg-transparent z-50 flex items-center justify-end">
+	<select class="w-fit" id="lang-select" name="languages">
+		<option value="CA" class="flex items-center"> Català </option>
+		<option value="EN" class="flex items-center">
+			English
+		</option>
+		<option value="NL" class="flex items-center">
+			Nederland
+		</option>
+	</select>
+</nav>
+<style>
+	select {
+		appearance: none;
+		background-color: #333;
+		color: white;
+		padding: 8px 12px;
+		border-radius: 5px;
+		border: 1px solid #555;
+		cursor: pointer;
+		font-size: 1rem;
+		outline: none;
+		transition: border-color 0.2s ease-in-out;
+	}
+
+	select:hover {
+		border-color: #777;
+	}
+
+	select:focus {
+		border-color: #007bff;
+		box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+	}
+
+	select {
+		background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+		background-repeat: no-repeat;
+		background-position: right 8px center;
+		background-size: 20px;
+		padding-right: 30px;
+	}
+
+	/* Style for options */
+	select option {
+		background-color: #333;
+		color: white;
+	}
+</style>
+<script>
+	function exec() {
+		const selectElement = document.querySelector("select")
+		const path = window.location.pathname
+
+		const languages_path: { [key: string]: { path: string; text: string } } = {
+			CA: {
+				path: "/",
+				text: "Català",
+			},
+			EN: {
+				path: "/en",
+				text: "English",
+			},
+			NL: {
+				path: "/nl",
+				text: "Nederland",
+			},
+		}
+
+		if (!selectElement) return
+
+		selectElement.addEventListener("change", function () {
+			const selectedValue = selectElement.value
+			const newPath = languages_path[selectedValue].path
+			window.location.href = newPath
+		})
+
+		const path_formatted = path.replace("/", "").toUpperCase()
+
+		if (languages_path[path_formatted]) {
+			selectElement.value = path_formatted
+		}
+	}
+
+	exec()
+</script>

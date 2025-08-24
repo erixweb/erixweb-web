@@ -18,6 +18,7 @@ import User from "~/components/icons/user.astro"
 import Keyword from "~/components/keyword.astro"
 
 import NetherlandsFlag from "~/components/icons/netherlands-flag.astro"
+import LanguageSelection from "./language-selection.astro"
 export interface Props {
 	language: string
 }
@@ -26,6 +27,7 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 ---
 
 <PageLayout>
+	<LanguageSelection />
 	<Header translations={i18n.header} />
 	<main class="p-[16px] w-full max-w-[50em] m-auto">
 		<section class="pb-[40px]" id="llengues">
@@ -128,14 +130,14 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 			</p>
 			<p class="m-0 my-[0px] max-w-[600px] py-[1.5px]">
 				M'especialitzo en tecnologies com <Keyword
-				size={20}
-				className="from-blue-300 to-blue-600">React</Keyword
+					size={20}
+					className="from-blue-300 to-blue-600">React</Keyword
 				>, <Keyword size={20} className="from-white to-gray-300">Next</Keyword>, <Keyword
-				size={20}
-				className="from-orange-300 to-orange-600">Svelte</Keyword
+					size={20}
+					className="from-orange-300 to-orange-600">Svelte</Keyword
 				>, <Keyword size={20} className="from-green-300 to-green-600">NodeJS</Keyword> o <Keyword
-				size={20}
-				className="from-purple-400 to-purple-600">PHP</Keyword
+					size={20}
+					className="from-purple-400 to-purple-600">PHP</Keyword
 				> amb <Keyword size={20} className="from-red-300 to-red-600">Laravel</Keyword>.
 			</p>
 			<p class="m-0 my-[0px] max-w-[600px] py-[1.5px]">
