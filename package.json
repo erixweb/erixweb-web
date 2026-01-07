@@ -14,7 +14,7 @@
     "@astrojs/cloudflare": "12.6.12",
     "@fontsource/onest": "5.2.11",
     "@tailwindcss/vite": "4.1.18",
-    "astro": "5.16.6",
+    "astro": "5.16.7",
     "tailwindcss": "4.1.18"
   },
   "devDependencies": {
