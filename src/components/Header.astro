@@ -1,7 +1,18 @@
 ---
 import AnimatedBox from "./animated-box.astro"
 import GithubIcon from "./icons/github-icon.astro"
+import HtmlIcon from "./icons/html-icon.astro"
 import MailIcon from "./icons/mail-icon.astro"
+import JavaScriptIcon from "./icons/javascript-icon.astro"
+import CSSIcon from "./icons/css-icon.astro"
+import TSIcon from "./icons/typescript-icon.astro"
+import NextIcon from "./icons/next-icon.astro"
+import ReactIcon from "./icons/react-icon.astro"
+import AstroIcon from "./icons/astro-icon.astro"
+import Svelte from "./icons/svelte-icpn.astro"
+import Skill from "./Skill.astro"
+import RemixIcon from "./icons/remix-icon.astro"
+import JavascriptIcon from "./icons/javascript-icon.astro"
 export interface Props {
 	translations: any
 }
@@ -10,9 +21,9 @@ const { translations } = Astro.props
 ---
 
 <header
-	class="flex flex-col justify-center items-center px-6 w-full overflow-hidden relative min-h-screen backdrop-blur-xl bg-linear-to-b bg-black to-40%  border-b-2 border-blue-400"
->	
-	<div class="absolute bg-blue-800 backdrop-blur-xl w-full  h-30 blur-[250px] top-0 left-0 "></div>
+	class="flex flex-col justify-center items-center px-6 w-full overflow-hidden relative min-h-screen backdrop-blur-xl bg-linear-to-b bg-black to-40% border-b-2 border-blue-400"
+>
+	<div class="absolute bg-blue-800 backdrop-blur-xl w-full h-30 blur-[250px] top-0 left-0"></div>
 	<div class="meteors w-full h-full min-h-screen overflow-hidden absolute top-0 left-0">
 		<div class="meteor"></div>
 		<div class="meteor"></div>
@@ -22,7 +33,7 @@ const { translations } = Astro.props
 		<div class="meteor"></div>
 	</div>
 	<div class="stars w-full h-full min-h-screen overflow-hidden absolute top-0 left-0"></div>
-	<div class="w-full max-w-[50em] flex flex-col z-[9999]">
+	<div class="w-full max-w-[50em] flex flex-col z-9999">
 		<div class="w-full">
 			<h1
 				class="text-[60px] font-[Onest] font-bold animate-fade-top animate-duration-700 text-center"
@@ -51,15 +62,15 @@ const { translations } = Astro.props
 				{translations.text_2}
 			</p>
 			<div
-				class="mt-10 flex max-w-[500px]:m-auto max-w-[700px]:w-full gap-3.75 animate-fade-in-right animate-duration-800 max-md:flex-col py-6.5 m-auto w-full max-w-150"
+				class="mt-10 flex max-w-[500px]:m-auto max-w-[700px]:w-full gap-3.75 animate-fade-in-right animate-duration-800 max-md:flex-col py-6.5 m-auto w-full max-w-175"
 			>
 				<AnimatedBox href="https://github.com/erixweb/">
 					<GithubIcon width="40px" height="40px" />
 					<span class="w-full p-2">Github</span>
 				</AnimatedBox>
-				<AnimatedBox href="mailto:erikdev.bcn@gmail.com">
+				<AnimatedBox href="mailto:erikmoreno.bdn@gmail.com">
 					<MailIcon width="40px" height="40px" />
-					<span class="w-full p-2">erikdev.bcn@gmail.com</span>
+					<span class="w-full p-2">erikmoreno.bdn@gmail.com</span>
 				</AnimatedBox>
 			</div>
 		</div>
