@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions"
 import Navigation from "~/components/Navigation.astro"
 import "~/styles/global.css"
 
@@ -34,7 +33,6 @@ const { img, title, desc } = frontmatter
 				document.querySelectorAll("img").forEach(Lazy)
 			})
 		</script>
-		<ViewTransitions />
 	</head>
 	<body class="bg-zinc-800">
 		<Navigation />
