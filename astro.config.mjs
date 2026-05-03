@@ -13,7 +13,7 @@ export default defineConfig({
 			cssCodeSplit: false,
 		},
 	},
-	base: "client/",
+	base: "/",
 	i18n: {
 		locales: ["en", "ca"],
 		defaultLocale: "ca",
