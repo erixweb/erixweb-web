@@ -69,16 +69,13 @@ const { translations } = Astro.props
 <script>
 	// @ts-check
 
-	const canvas = /** @type {HTMLCanvasElement} */ (document.getElementById("galaxyCanvas"))
+	const canvas = document.getElementById("galaxyCanvas") as HTMLCanvasElement
 
 	const ctx = canvas?.getContext("2d")
 
-	/** @type {number} */
-	let width
-	/** @type {number} */
-	let height
-	/** @type {Array<{baseAngle: number, radius: number, x: number, y: number, size: number, speed: number, color: string, glow: string, offset: {x: number, y: number}}>} */
-	let stars
+	let width: number
+	let height: number
+	let stars: Array<{baseAngle: number, radius: number, x: number, y: number, size: number, speed: number, color: string, glow: string, offset: {x: number, y: number}}>
 
 	const starCount = 800
 	const holeRadius = 45
@@ -92,11 +89,7 @@ const { translations } = Astro.props
 		}
 	}
 
-	/**
-	 *
-	 * @param index { Number }
-	 */
-	function createStar(index) {
+	function createStar(index: number) {
 		const angle = index * 0.1
 		const radius = Math.sqrt(index) * 12
 		const offsetX = (Math.random() - 0.5) * (radius * 0.4)
