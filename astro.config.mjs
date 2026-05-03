@@ -5,15 +5,15 @@ import tailwindcss from "@tailwindcss/vite"
 
 // https://astro.build/config
 export default defineConfig({
-	output: "server",
+	output: "static",
 	adapter: cloudflare(),
-
 	vite: {
 		plugins: [tailwindcss()],
 		build: {
 			cssCodeSplit: false,
 		},
 	},
+	base: "client/",
 	i18n: {
 		locales: ["en", "ca"],
 		defaultLocale: "ca",
