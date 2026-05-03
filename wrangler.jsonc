@@ -1,0 +1,4 @@
+{
+  "main": "@astrojs/cloudflare/entrypoints/server",
+  "name": "erixweb-web"
+}
