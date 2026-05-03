@@ -14,6 +14,9 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss({ config: "./tailwind.config.cjs" })],
+    build: {
+      cssCodeSplit: false,
+    },
   },
   i18n: {
     locales: ["en", "ca"],
