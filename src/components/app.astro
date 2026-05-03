@@ -29,16 +29,16 @@ const i18n = await import(`../i18n/${language || "ca"}.json`)
 <PageLayout>
 	<LanguageSelection />
 	<Header translations={i18n.header} />
-	<main class="p-[16px] w-full max-w-[50em] m-auto">
-		<section class="pb-[40px]" id="llengues">
-			<div class="inline-flex items-center justify-center gap-[10px]">
+	<main class="p-4 w-full max-w-[50em] m-auto">
+		<section class="pb-10 relative" id="llengues">
+			<div class="inline-flex items-center justify-center gap-2.5">
 				<LanguageIcon width="54px" height="54px" />
 				<h2 class="text-[30px] font-bold font-sans text-start w-full">
 					{i18n.languages.title}
 				</h2>
 			</div>
 
-			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-[20px]">
+			<div class="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-5">
 				<Skill name="Castellano">
 					<SpainFlag />
 				</Skill>

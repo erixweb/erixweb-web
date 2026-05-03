@@ -1,18 +1,7 @@
 ---
 import AnimatedBox from "./animated-box.astro"
 import GithubIcon from "./icons/github-icon.astro"
-import HtmlIcon from "./icons/html-icon.astro"
 import MailIcon from "./icons/mail-icon.astro"
-import JavaScriptIcon from "./icons/javascript-icon.astro"
-import CSSIcon from "./icons/css-icon.astro"
-import TSIcon from "./icons/typescript-icon.astro"
-import NextIcon from "./icons/next-icon.astro"
-import ReactIcon from "./icons/react-icon.astro"
-import AstroIcon from "./icons/astro-icon.astro"
-import Svelte from "./icons/svelte-icpn.astro"
-import Skill from "./Skill.astro"
-import RemixIcon from "./icons/remix-icon.astro"
-import JavascriptIcon from "./icons/javascript-icon.astro"
 export interface Props {
 	translations: any
 }
@@ -23,7 +12,8 @@ const { translations } = Astro.props
 <header
 	class="flex flex-col justify-center items-center px-6 w-full overflow-hidden relative min-h-screen backdrop-blur-xl bg-linear-to-b bg-black to-40% border-b-2 border-blue-400"
 >
-	<div class="absolute bg-blue-800 backdrop-blur-xl w-full h-30 blur-[250px] top-0 left-0"></div>
+	<canvas id="galaxyCanvas" class="absolute z-0 opacity-45" style="z-index: 0;"></canvas>
+	<!-- <div class="absolute bg-blue-800 backdrop-blur-xl w-full h-30 blur-[250px] top-0 left-0"></div> -->
 	<div class="meteors w-full h-full min-h-screen overflow-hidden absolute top-0 left-0">
 		<div class="meteor"></div>
 		<div class="meteor"></div>
@@ -36,14 +26,13 @@ const { translations } = Astro.props
 	<div class="w-full max-w-[50em] flex flex-col z-9999">
 		<div class="w-full">
 			<h1
-				class="text-[60px] font-[Onest] font-bold animate-fade-top animate-duration-700 text-center"
+				class="text-8xl font-[Onest] font-bold animate-fade-top animate-duration-700 text-center"
 			>
 				<span
 					class="bg-clip-text text-transparent from-white to-gray-400 bg-linear-to-b text-center"
 				>
 					{translations.title}
 				</span>
-				<span> 👋 </span>
 			</h1>
 
 			<p
@@ -76,3 +65,128 @@ const { translations } = Astro.props
 		</div>
 	</div>
 </header>
+
+<script>
+	// @ts-check
+
+	const canvas = /** @type {HTMLCanvasElement} */ (document.getElementById("galaxyCanvas"))
+
+	const ctx = canvas?.getContext("2d")
+
+	/** @type {number} */
+	let width
+	/** @type {number} */
+	let height
+	/** @type {Array<{baseAngle: number, radius: number, x: number, y: number, size: number, speed: number, color: string, glow: string, offset: {x: number, y: number}}>} */
+	let stars
+
+	const starCount = 800
+	const holeRadius = 45
+
+	function init() {
+		width = canvas.width = window.innerWidth
+		height = canvas.height = window.innerHeight
+		stars = []
+		for (let i = 0; i < starCount; i++) {
+			stars.push(createStar(i))
+		}
+	}
+
+	/**
+	 *
+	 * @param index { Number }
+	 */
+	function createStar(index) {
+		const angle = index * 0.1
+		const radius = Math.sqrt(index) * 12
+		const offsetX = (Math.random() - 0.5) * (radius * 0.4)
+		const offsetY = (Math.random() - 0.5) * (radius * 0.4)
+
+		return {
+			baseAngle: angle,
+			radius: radius,
+			x: 0,
+			y: 0,
+			size: Math.random() * 2 + 0.5,
+			speed: 0.004 + Math.random() * 0.002,
+			color: Math.random() > 0.5 ? "#ffffff" : "#bddefa",
+			glow: "#3a86ff",
+			offset: { x: offsetX, y: offsetY },
+		}
+	}
+
+	function draw() {
+        if (!ctx) return
+
+		// Semi-transparent clear for motion trails
+		ctx.fillStyle = "rgba(2, 2, 5, 0.15)"
+		ctx.fillRect(0, 0, width, height)
+
+		ctx.save()
+		ctx.translate(width / 2, height / 2)
+
+		// 1. Draw Gravitational Lensing (Outer Distortion Glow)
+		const lensing = ctx.createRadialGradient(0, 0, holeRadius, 0, 0, holeRadius * 4)
+		lensing.addColorStop(0, "rgba(60, 130, 255, 0.4)")
+		lensing.addColorStop(0.5, "rgba(30, 60, 150, 0.1)")
+		lensing.addColorStop(1, "rgba(0, 0, 0, 0)")
+		ctx.fillStyle = lensing
+		ctx.beginPath()
+		ctx.arc(0, 0, holeRadius * 4, 0, Math.PI * 2)
+		ctx.fill()
+
+		stars.forEach((star) => {
+            
+
+			star.baseAngle += star.speed
+
+			// Star position
+			let x = Math.cos(star.baseAngle) * (star.radius / 0.5) + star.offset.x
+			let y = Math.sin(star.baseAngle) * star.radius + star.offset.y
+
+			const distToCenter = Math.sqrt(x ** 2 + y ** 2)
+
+			// 2. Light Distortion Effect
+			// If a star is near the black hole, we pull its visual position inward
+			// and increase its speed to simulate an orbit acceleration
+			if (distToCenter < holeRadius * 3.5) {
+				const pull = 0.7
+				x *= pull
+				y *= pull
+			}
+
+			// 3. Render Stars (only if outside the event horizon)
+			if (distToCenter > holeRadius + 5) {
+				ctx.shadowBlur = star.radius < 200 ? 12 : 0 // Only glow inner stars for performance
+				ctx.shadowColor = star.glow
+				ctx.fillStyle = star.color
+				ctx.beginPath()
+				ctx.arc(x, y, star.size, 0, Math.PI * 2)
+				ctx.fill()
+			}
+		})
+
+		// 4. The Black Hole
+		ctx.shadowBlur = 30
+		ctx.shadowColor = "rgba(0,0,0,1)"
+		ctx.fillStyle = "#000000"
+		ctx.beginPath()
+		ctx.arc(0, 0, holeRadius, 0, Math.PI * 2)
+		ctx.fill()
+
+		// 5. Photon Sphere
+		ctx.shadowBlur = 15
+		ctx.shadowColor = "#3a86ff"
+		ctx.strokeStyle = "rgba(255, 255, 255, 0.6)"
+		ctx.lineWidth = 1.5
+		ctx.stroke()
+
+		ctx.restore()
+		requestAnimationFrame(draw)
+	}
+
+	window.addEventListener("resize", init)
+	init()
+
+	draw()
+</script>
