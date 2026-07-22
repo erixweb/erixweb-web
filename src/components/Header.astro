@@ -8,7 +8,6 @@ export interface Props {
 
 const { translations } = Astro.props
 ---
-
 <header
 	class="flex flex-col justify-center items-center px-6 w-full overflow-hidden relative min-h-screen backdrop-blur-xl bg-linear-to-b bg-black to-40% border-b-2 border-blue-400"
 >
@@ -43,10 +42,10 @@ const { translations } = Astro.props
 			<p
 				class="mt-5 text-zinc-400 max-w-150 text-[20px] slide-in-top animate-duration-700 animate-fade-top m-auto"
 			>
-				{translations.text_1}
+				{translations.text_1} 
 				<span
 					class="text-[24px] from-yellow-500 to-yellow-300 bg-clip-text bg-linear-to-r text-transparent font-bold"
-					>{translations.highlight_1}</span
+				>{" " + translations.highlight_1 + " "}</span
 				>
 				{translations.text_2}
 			</p>
